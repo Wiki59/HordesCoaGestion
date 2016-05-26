@@ -1,5 +1,2 @@
 <?php
-
-class newTown {
-    
-}
+    echo $_SERVER["method"];
