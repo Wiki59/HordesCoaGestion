@@ -3,22 +3,18 @@
  Tiré d'un autre projet professionel
  */
 $(".searcher").on("focus", function () {
-    console.log("ok");
     var resultTab = [];
     var target = $(this);
     target.val("");
     $.ajax({
         type: "POST",
-        url: "allTown.php",
+        url: "allTown.php?token=" + $("#token").val(),
         success: function (data) {
-            $.each(data, function (k, v) {
-		console.log(k, v);
-                var maper = v.map(function (value) {
-                    return {
-                        value: value
-                    };
-                });
-                // Affichage en autocomplete
+		var maper = [];
+            JSON.parse(data, function (k, v) {
+			maper.push(v);
+		});
+		// Affichage en autocomplete
                 target.autocomplete({
                     source: maper,
                     autoFocus: true,
@@ -54,27 +50,18 @@ $(".searcher").on("focus", function () {
                 }
                 // Affichage liste, dans une div#result
                 target.on("keydown.resulter", resultShow = function () {
-                    // TODO : Show all data if empty target.val
                     $("#result").html("<h3>Resultat :</h3>");
                     $.each(resultTab, function (key, val) {
-                        $("#result").append(val.id + " - " + val.value);
-                        try {
-                            $("#result").append(" - " + val.type);
-                        } catch (e) {
-                            console.log("No result found");
-                        }
+                        $("#result").append("<a>" + val.value + "</a>");
                         $("#result").append("<br/>");
                     });
                 });
                 target.one("focus", resultShow());
-                /*
-                 * On retire les keydown, si non il se cumule
-                 */
+                 // On retire les keydown, si non il se cumule
                 target.on("blur", function () {
                     target.attr("plcHoldI", "0");
                     target.off("keydown.holdering keydown.resulter");
                 });
-            });
         }
     });
 });

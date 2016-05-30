@@ -6,21 +6,22 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     session_start();
     if (
     //isset
-            isset($_SESSION["token"]) &&
-            isset($_POST["token"]) &&
+//            isset($_SESSION["token"]) &&
+//            isset($_POST["token"]) &&
             //isGood
-            $_SESSION["token"] == $_POST["token"]
+//            $_SESSION["token"] == $_POST["token"]
+true
     ) {
         $dir = dir("town");
         $town = array();
         while (false !== ($f = $dir->read())) {
-            if (is_dir($f) && $f != "." && f != "..") {
+            if (!is_dir($f) && $f != "." && f != "..") {
                 array_push($town, $f);
             }
         }
         echo json_encode($town);
     } else {
-        header("HTTP/1.0 400 Bad Request", true, 400);
+        header("HTTP/1.0 400 Bad Request Token", true, 400);
     }
 }
 
