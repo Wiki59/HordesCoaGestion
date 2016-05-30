@@ -12,10 +12,12 @@ $_SESSION['token_time'] = time();
         <meta http-equiv="Content-Language" content="fr"/>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" href="allumette.ico" />
+        <link rel="stylesheet" href="/bundles/framework/css/jquery-ui.css"/>
         <title>
             Manager
         </title>
-        <script type="text/javascript" src="jquery22.js"></script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery-ui.js"></script>
         <script type="text/javascript">
             var code = "<?php echo $_GET["code"]; ?>";
         </script>

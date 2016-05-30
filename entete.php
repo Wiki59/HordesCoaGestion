@@ -1,6 +1,6 @@
 <div id="entete">
     <label id="mainLabel"></label>
-    <input type="text" placeholder="Voir ville" id="showTown"/>
+    <input type="text" placeholder="Voir ville" id="showTown" class="searcher"/>
     <form id="formTown" action="newTown.php" method="POST">
         <input name="token" type="hidden" value="<?php echo $token; ?>"/>
         <input name="town" type="text" placeholder="Créer une ville"/>
