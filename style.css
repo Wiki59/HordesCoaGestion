@@ -9,7 +9,7 @@ html, body {
     text-align: center;
 }
 
-#entete input, #entete label {
+#entete input, #entete #mainLabel {
     margin-top: 10px;
 }
 
@@ -23,4 +23,5 @@ html, body {
     float: left;
     margin-left: 20px;
     width: 100px;
+	text-decoration: none;
 }
