@@ -15,4 +15,3 @@ foreach($param as $key=>$value) {
 $param_string = substr($param_string, 0, -1);
 $final_link = $link . $param_string;
 header($link . $param_string);
-//echo $final_link;

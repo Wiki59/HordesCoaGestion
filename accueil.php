@@ -3,6 +3,7 @@ session_start();
 $token = uniqid(rand(), true);
 $_SESSION['token'] = $token;
 $_SESSION['token_time'] = time();
+//include("info.php?state=Ok&code=" . $_GET["code"]);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -16,12 +17,12 @@ $_SESSION['token_time'] = time();
         </title>
         <script type="text/javascript" src="jquery22.js"></script>
         <script type="text/javascript">
-            code = "<?php echo $_GET["code"]; ?>";
+           	var code = "<?php echo $_GET["code"]; ?>";
         </script>
     </head>
     <body>
         <div id="entete">
-		<label id="mainLabel">Wiki</label>
+		<label id="mainLabel"></label>
 	        <input type="text" placeholder="Voir ville" id="showTown"/>
             <form id="formTown" action="newTown.php" method="POST">
                 <input name="token" type="hidden" value="<?php echo $token; ?>"/>
@@ -30,6 +31,7 @@ $_SESSION['token_time'] = time();
             </form>
         </div>
         <div id="content">
+		<?php echo var_dump($_SESSION) ?>
         </div>
         <script type="text/javascript" src="script.js"></script>
     </body>

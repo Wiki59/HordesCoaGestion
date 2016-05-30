@@ -1,13 +1,15 @@
 <?php
+session_start();
 // Obtention du token
-$_SESSION["access_token"] = postToArray("https://twinoid.com/oauth/token", array(
-      "client_id" => "270",
-      "client_secret" => "1VPwhhvTvE707ipCuV6nlh6euT942YZ8",
-      "redirect_uri" => "http%3A%2F%2Fwww.hordes.wissamlefevre.com%2Faccueil.php",
-      "code" => $_GET["code"],
-      "grant_type" => "authorization_code",
-))["access_token"];
-
+if ($_SESSION["access_token"] === NULL) {
+	$_SESSION["access_token"] = postToArray("https://twinoid.com/oauth/token", array(
+      		"client_id" => "270",
+      		"client_secret" => "1VPwhhvTvE707ipCuV6nlh6euT942YZ8",
+      		"redirect_uri" => "http%3A%2F%2Fwww.hordes.wissamlefevre.com%2Faccueil.php",
+      		"code" => $_GET["code"],
+      		"grant_type" => "authorization_code",
+	))["access_token"];
+}
 // Recuperation des infos me twino/hordes, l'id et le pseudo
 /*
 $me = postToArray("http://twinoid.com/graph/me", array(
@@ -39,8 +41,6 @@ foreach ($pictos[sites][0][stats] as $picto) {
 	}
 }
 
-echo var_dump($me["map"]["bonusPts"]);
-
 // data
 $data = array(
 	"pseudo" => $me["name"],
@@ -52,7 +52,8 @@ $data = array(
 	"isGhost" => $me["isGhost"],
 	"baseDef" => $me["baseDef"],
 );
-//echo var_dump($data);
+$_SESSION["user"] = $data;
+$_SESSION["user_ok"] = "ok";
 echo json_encode($data);
 
 // Functions
