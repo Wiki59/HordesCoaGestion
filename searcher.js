@@ -3,16 +3,16 @@
  Tiré d'un autre projet professionel
  */
 $(".searcher").on("focus", function () {
+    console.log("ok");
     var resultTab = [];
     var target = $(this);
-    // Vide au click
     target.val("");
-    var url = "allTown.php";
     $.ajax({
         type: "POST",
-        url: url,
+        url: "allTown.php",
         success: function (data) {
             $.each(data, function (k, v) {
+		console.log(k, v);
                 var maper = v.map(function (value) {
                     return {
                         value: value
