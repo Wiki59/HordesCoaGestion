@@ -14,20 +14,19 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     ) {
         if (!is_dir("town/" . $_POST["town"])) {
             $mk = mkdir("town/" . $_POST["town"]);
-		 $file = "citizen.json";
+            $file = "citizen.json";
             $fd = fopen("town/" . $_POST["town"] . "/" . $file, "a+");
             $citizen = array();
             $citizen_json = json_encode($citizen);
             $fw = fwrite($fd, $citizen_json);
             $fc = fclose($fd);
-        	header("Location: accueil.php");
-	} else {
+            header("Location: accueil.php");
+        } else {
             echo "Nom de ville déjà existant";
-	 header("Location: accueil.php");
+            header("Location: accueil.php");
         }
     } else {
         header("HTTP/1.0 400 Bad Request", true, 400);
     }
-
 }
 

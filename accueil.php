@@ -17,21 +17,13 @@ $_SESSION['token_time'] = time();
         </title>
         <script type="text/javascript" src="jquery22.js"></script>
         <script type="text/javascript">
-           	var code = "<?php echo $_GET["code"]; ?>";
+            var code = "<?php echo $_GET["code"]; ?>";
         </script>
     </head>
     <body>
-        <div id="entete">
-		<label id="mainLabel"></label>
-	        <input type="text" placeholder="Voir ville" id="showTown"/>
-            <form id="formTown" action="newTown.php" method="POST">
-                <input name="token" type="hidden" value="<?php echo $token; ?>"/>
-                <input name="town" type="text" placeholder="Créer une ville"/>
-                <input type="submit" value="Go"/>
-            </form>
-        </div>
-        <div id="content">
-		<?php echo var_dump($_SESSION) ?>
+        <?php include './entete.php'; ?>
+        <div id="result">
+            <?php echo var_dump($_SESSION) ?>
         </div>
         <script type="text/javascript" src="script.js"></script>
     </body>
