@@ -1,3 +1,26 @@
+html, body {
+	margin: 0;
+}
+
 #entete {
-    
+	background: black;
+	height: 40px;
+	vertical-align: text-top;
+	text-align: center;
+}
+
+#entete input, #entete label {
+	margin-top: 10px;
+}
+
+#formTown {
+	float: right;
+	margin-right: 20px;
+}
+
+#mainLabel {
+	color: white;
+	float: left;
+	margin-left: 20px;
+	width: 100px;
 }

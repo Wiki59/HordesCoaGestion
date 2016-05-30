@@ -1,4 +1,10 @@
+var user = "";
 $.get("info.php?state=Ok&code=" + code, function(data) {
- 	$("#content").html(data);
-	console.log(data);
+	$.each(data, function(k, v) {
+		console.log(k, v);
+	});
 });
+
+//console.log(user);
+
+//$(#mainLabel").val(data['pseudo']);

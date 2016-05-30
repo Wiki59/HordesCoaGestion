@@ -21,7 +21,9 @@ $_SESSION['token_time'] = time();
     </head>
     <body>
         <div id="entete">
-            <form class="tokenSubmitter" action="newTown.php" method="POST">
+		<label id="mainLabel">Wiki</label>
+	        <input type="text" placeholder="Voir ville" id="showTown"/>
+            <form id="formTown" action="newTown.php" method="POST">
                 <input name="token" type="hidden" value="<?php echo $token; ?>"/>
                 <input name="town" type="text" placeholder="Créer une ville"/>
                 <input type="submit" value="Go"/>
