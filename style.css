@@ -71,3 +71,10 @@ a:hover {
 	color: blue !important;
 }
 
+h2 {
+	margin: 5px;
+}
+
+td {
+	padding: 5px;
+}

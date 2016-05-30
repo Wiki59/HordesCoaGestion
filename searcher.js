@@ -51,12 +51,13 @@ $(".searcher").on("focus", function () {
             // Affichage liste, dans une div#result
             target.on("keydown.resulter", resultShow = function (e = null) {
 		if (e == null || e.keyCode != 13) {
-                	$("#result").html("<table><tr><th><h1>Resultat :</h1></th></tr>");
+                	toAppend = "<table><tr><th><h2>Resultat :</h2></th></tr>";
                 	$.each(resultTab, function (key, val) {
-                	    $("#result").append("<tr class='townResult'><td><a href='town.php?town=" + val.value + "'>" + val.value + "</a>");
-                	    $("#result").append("</td></tr>");
+                	    toAppend += "<tr class='townResult'><td><a href='town.php?town=" + val.value + "'>" + val.value + "</a>";
+                	    toAppend += "</td></tr>";
                 	});
-			$("#result").append("</table>");
+			toAppend += "</table>";
+			$("#result").html(toAppend);
         	} else {
 			if (target.val() != "") {
 				window.open("/town.php?town=" + target.val(), "_self");
