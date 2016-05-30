@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     session_start();
     if (
             isset($_SESSION["token"]) &&
-            isset($_SESSION["token_time"]) &&
             isset($_POST["token"]) &&
             $_SESSION["token"] == $_POST["token"] &&
             $_SESSION["token_time"] >= (time() - (10 * 60) &&
@@ -16,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
         if (is_dir("/town/" . $_POST["town"])) {
             fopen("/town/" . $_POST["town"] . "/citizen.json");
         } else {
-            echo "Nom de ville déjà existant";
+            echo "Citoyen déjà présent";
         }
     } else {
         header("HTTP/1.0 400 Bad Request", true, 400);
