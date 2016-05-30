@@ -25,27 +25,15 @@ $_SESSION['token_time'] = time();
     <body>
         <?php include './entete.php'; ?>
         <div id="content">
-            <?php
-		if (isset($_GET["town"])) {
-	                $town = $_GET["town"];
-			echo "<h1>$town</h1>";
-			if (is_file("town/" . $town . "/citizen.json")) {
-				$citizens = file_get_contents("town/" . $town . "/citizen.json");
-				$array = json_decode($citizens, true);
-				echo "<table>";
-				echo "<tr><th>Pseudo</th><th>Heros</th><th>JH Cumulé</th></tr>";
-				foreach ($array['citizen'] as $pseudo => $citizen) {
-					echo "<tr><td>$pseudo</td></tr>";
-				}
-				echo "</table>";
-
-			} else {
-				echo "<h4>Ville introuvable</h4>";
-			}
+            <?php 
+		if ($_SESSION["user"]["pseudo"] != null) {
+			$user = $_SESSION["user"];
+			echo "Pseudo : " . $user["pseudo"];
 		} else {
-			echo "<h4>Nom de ville manquant à la requette</h4>";
+			echo "Reconnectez vous";
 		}
-	 ?>
+	
+		 ?>
         </div>
         <script type="text/javascript" src="searcher.js"></script>
         <script type="text/javascript" src="script.js"></script>

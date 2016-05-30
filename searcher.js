@@ -49,13 +49,14 @@ $(".searcher").on("focus", function () {
                 target.attr("placeholder", "...");
             }
             // Affichage liste, dans une div#result
-            target.on("keydown.resulter", resultShow = function (e) {
-		if (e.keyCode != 13) {
-                	$("#result").html("<h3>Resultat :</h3>");
+            target.on("keydown.resulter", resultShow = function (e = null) {
+		if (e == null || e.keyCode != 13) {
+                	$("#result").html("<table><tr><th><h1>Resultat :</h1></th></tr>");
                 	$.each(resultTab, function (key, val) {
-                	    $("#result").append("<a href='town.php?town=" + val.value + "'>" + val.value + "</a>");
-                	    $("#result").append("<br/>");
+                	    $("#result").append("<tr class='townResult'><td><a href='town.php?town=" + val.value + "'>" + val.value + "</a>");
+                	    $("#result").append("</td></tr>");
                 	});
+			$("#result").append("</table>");
         	} else {
 			if (target.val() != "") {
 				window.open("/town.php?town=" + target.val(), "_self");

@@ -2,10 +2,12 @@
 
 session_start();
 // Obtention du token
+$clientSecret = file_get_contents("/var/ressourceWeb/clientsecret");
+$clientSecret = substr($clientSecret, 0, -1);
 if ($_SESSION["access_token"] === NULL) {
     $_SESSION["access_token"] = postToArray("https://twinoid.com/oauth/token", array(
                 "client_id" => "270",
-                "client_secret" => "1VPwhhvTvE707ipCuV6nlh6euT942YZ8",
+                "client_secret" => $clientSecret,
                 "redirect_uri" => "http%3A%2F%2Fwww.hordes.wissamlefevre.com%2Faccueil.php",
                 "code" => $_GET["code"],
                 "grant_type" => "authorization_code",
@@ -64,9 +66,6 @@ function postToArray($link, $param = null, $method = "POST") {
     if ($method === "POST" && isset($param)) {
         curl_setopt($ch, CURLOPT_POST, count($param));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $param_string);
-    }
-    if ($method === "GET") {
-        
     }
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($ch);
