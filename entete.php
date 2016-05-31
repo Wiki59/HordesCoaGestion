@@ -1,3 +1,9 @@
+<?php
+session_start();
+$token = uniqid(rand(), true);
+$_SESSION['token'] = $token;
+$_SESSION['token_time'] = time();
+?>
 <div id="entete">
     <div id="userDiv"><a href="/me.php" id="mainLabel">Deconnecté</a><a id="recoLink" href="logout.php">Se reconnecter</a></div>
     <input type="text" placeholder="Ville" id="showTown" class="searcher" plcHoldI="0"/>

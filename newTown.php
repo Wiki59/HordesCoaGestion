@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Créé un dossier au nom de la ville et inclue un fichier citizen.json
  */

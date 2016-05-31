@@ -5,12 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 } else {
     session_start();
     if (
-    //isset
-//            isset($_SESSION["token"]) &&
-//            isset($_POST["token"]) &&
-            //isGood
-//            $_SESSION["token"] == $_POST["token"]
-true
+    /*
+      isset($_SESSION["token"]) &&
+      isset($_POST["token"]) &&
+      $_SESSION["token"] == $_POST["token"]
+     */
+            true
     ) {
         $dir = dir("town");
         $town = array();

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
 } else {
     session_start();
-    if (/*isset($_SESSION["token"]) && isset($_POST["token"]) && $_SESSION["token"] == $_POST["token"] &&*/ isset($_POST["town"]) && isset($_SESSION["user"])) {
+    if (isset($_POST["town"]) && isset($_SESSION["user"])) {
         if (is_dir("/town/" . $_POST["town"])) {
             $citizens = file_get_contents("/town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
@@ -86,76 +86,76 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
  */
 function lastPow($jhCumul, $array = false) {
     $pow = array();
-    if (jhCumul > 3) {
+    if ($jhCumul > 3) {
         array_push($pow, "Manipulateur");
     }
-    if (jhCumul > 7) {
+    if ($jhCumul > 7) {
         array_push($pow, "Clairvoyance");
     }
-    if (jhCumul > 16) {
+    if ($jhCumul > 16) {
         array_push($pow, "Scribe motivé");
     }
-    if (jhCumul > 25) {
+    if ($jhCumul > 25) {
         array_push($pow, "Camaraderie");
     }
-    if (jhCumul > 31) {
+    if ($jhCumul > 31) {
         array_push($pow, "Dictateur");
     }
-    if (jhCumul > 45) {
+    if ($jhCumul > 45) {
         array_push($pow, "Grand coffre");
     }
-    if (jhCumul > 61) {
+    if ($jhCumul > 61) {
         array_push($pow, "Corp sain");
     }
-    if (jhCumul > 75) {
+    if ($jhCumul > 75) {
         array_push($pow, "Omnicience");
     }
-    if (jhCumul > 91) {
+    if ($jhCumul > 91) {
         array_push($pow, "Débrouillardise");
     }
-    if (jhCumul > 105) {
+    if ($jhCumul > 105) {
         array_push($pow, "Double fond");
     }
-    if (jhCumul > 121) {
+    if ($jhCumul > 121) {
         array_push($pow, "Jolie trouvailles");
     }
-    if (jhCumul > 135) {
+    if ($jhCumul > 135) {
         array_push($pow, "Poches bien rangés");
     }
-    if (jhCumul > 151) {
+    if ($jhCumul > 151) {
         array_push($pow, "Second souffle");
     }
-    if (jhCumul > 165) {
+    if ($jhCumul > 165) {
         array_push($pow, "Prévoyant");
     }
-    if (jhCumul > 181) {
+    if ($jhCumul > 181) {
         array_push($pow, "Armoire à glace");
     }
-    if (jhCumul > 195) {
+    if ($jhCumul > 195) {
         array_push($pow, "Perfidie");
     }
-    if (jhCumul > 211) {
+    if ($jhCumul > 211) {
         array_push($pow, "Vaincre la mort");
     }
-    if (jhCumul > 241) {
+    if ($jhCumul > 241) {
         array_push($pow, "Vaincre la mort");
     }
-    if (jhCumul > 301) {
+    if ($jhCumul > 301) {
         array_push($pow, "Vengeance sordide");
     }
-    if (jhCumul > 301) {
+    if ($jhCumul > 301) {
         array_push($pow, "Campeur pro");
     }
-    if (jhCumul > 361) {
+    if ($jhCumul > 361) {
         array_push($pow, "Camé prévoyant");
     }
-    if (jhCumul > 541) {
+    if ($jhCumul > 541) {
         array_push($pow, "Maire");
     }
-    if (jhCumul > 721) {
+    if ($jhCumul > 721) {
         array_push($pow, "Architecte");
     }
-    if (jhCumul > 1000) {
+    if ($jhCumul > 1000) {
         array_push($pow, "Veilleur pro");
     }
     if ($array) {

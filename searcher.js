@@ -50,22 +50,22 @@ $(".searcher").on("focus", function () {
             }
             // Affichage liste, dans une div#result
             target.on("keydown.resulter", resultShow = function (e) {
-		if (e == null || e.keyCode != 13) {
-                	toAppend = "<table><tr><th><h2>Resultat :</h2></th></tr>";
-                	$.each(resultTab, function (key, val) {
-                	    toAppend += "<tr class='townResult'><td><a href='town.php?town=" + val.value + "'>" + val.value + "</a>";
-                	    toAppend += "</td></tr>";
-                	});
-			toAppend += "</table>";
-			$("#result").html(toAppend);
-        	} else {
-			if (target.val() != "") {
-				window.open("/town.php?town=" + target.val(), "_self");
-			} else if (target.attr("placeholder") != "...") {
-				window.open("/town.php?town=" + target.attr("placeholder"), "_self");
-			}
-		}    
-	});
+                if (e == null || e.keyCode != 13) {
+                    toAppend = "<table><tr><th><h2>Resultat :</h2></th></tr>";
+                    $.each(resultTab, function (key, val) {
+                        toAppend += "<tr class='townResult'><td><a href='town.php?town=" + val.value + "'>" + val.value + "</a>";
+                        toAppend += "</td></tr>";
+                    });
+                    toAppend += "</table>";
+                    $("#result").html(toAppend);
+                } else {
+                    if (target.val() != "") {
+                        window.open("/town.php?town=" + target.val(), "_self");
+                    } else if (target.attr("placeholder") != "...") {
+                        window.open("/town.php?town=" + target.attr("placeholder"), "_self");
+                    }
+                }
+            });
             target.one("focus", resultShow());
             // On retire les keydown, si non ils se cumulent
             target.on("blur", function () {

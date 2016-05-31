@@ -19,77 +19,77 @@ html, body {
 }
 
 #userDiv {
-	color: white;
-	float: left;
-	
+    color: white;
+    float: left;
+
 }
 
 #mainLabel {
-	color: white;
+    color: white;
     margin-left: 20px;
     width: 80px;
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #result, #content {
-	margin: 40px;
-	padding: 0 40px;
-	text-align: center; 
+    margin: 40px;
+    padding: 0 40px;
+    text-align: center; 
 }
 
 table {
-	bordel: solid black 1px;
-	width: 100%;
-	border-collapse: collapse;
+    bordel: solid black 1px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th {
-	background: rgba(150, 150, 150, 0.9);
-	border-top: solid black 1px;
-	border-bottom: solid black 1px;
+    background: rgba(150, 150, 150, 0.9);
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
 }
 
 tr {
-	background: rgba(210, 210, 240, 0.5);
+    background: rgba(210, 210, 240, 0.5);
 }
 
 tr:nth-child(odd) {
-	background: rgba(240, 240, 240, 0.5);
+    background: rgba(240, 240, 240, 0.5);
 }
 
 #recoLink {
-	color: white;
-	margin-left: 20px;
-	text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
 }
 
 #recoLink:hover {
-	color: red !important;
+    color: red !important;
 }
 
 a:hover {
-	color: blue !important;
+    color: blue !important;
 }
 
 h2 {
-	margin: 5px;
+    margin: 5px;
 }
 
 td {
-	padding: 5px;
+    padding: 5px;
 }
 
 .buttonStyle1 {
-	border: solid black 1px;
-	background: rgba(230, 230, 230, 0.5);
-	margin: 30px;
+    border: solid black 1px;
+    background: rgba(230, 230, 230, 0.5);
+    margin: 30px;
 }
 
 .buttonStyle1:hover {
-	background: rgba(210, 210, 255, 0.7);
+    background: rgba(210, 210, 255, 0.7);
 }
 
 #boxInfo {
-	color: green;
-	margin-bottom: 30px;
+    color: green;
+    margin-bottom: 30px;
 }
