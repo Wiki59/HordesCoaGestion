@@ -49,7 +49,7 @@ $(".searcher").on("focus", function () {
                 target.attr("placeholder", "...");
             }
             // Affichage liste, dans une div#result
-            target.on("keydown.resulter", resultShow = function (e = null) {
+            target.on("keydown.resulter", resultShow = function (e) {
 		if (e == null || e.keyCode != 13) {
                 	toAppend = "<table><tr><th><h2>Resultat :</h2></th></tr>";
                 	$.each(resultTab, function (key, val) {
@@ -67,7 +67,7 @@ $(".searcher").on("focus", function () {
 		}    
 	});
             target.one("focus", resultShow());
-            // On retire les keydown, si non il se cumule
+            // On retire les keydown, si non ils se cumulent
             target.on("blur", function () {
                 target.attr("plcHoldI", "0");
                 target.off(".holdering .resulter");

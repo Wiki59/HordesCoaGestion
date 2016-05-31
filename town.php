@@ -26,26 +26,26 @@ $_SESSION['token_time'] = time();
         <?php include './entete.php'; ?>
         <div id="content">
             <?php
-		if (isset($_GET["town"])) {
-	                $town = $_GET["town"];
-			echo "<h1>$town</h1>";
-			if (is_file("town/" . $town . "/citizen.json")) {
-				$citizens = file_get_contents("town/" . $town . "/citizen.json");
-				$array = json_decode($citizens, true);
-				echo "<table>";
-				echo "<tr><th>Pseudo</th><th>Heros</th><th>JH Cumulé</th></tr>";
-				foreach ($array['citizen'] as $pseudo => $citizen) {
-					echo "<tr><td>$pseudo</td></tr>";
-				}
-				echo "</table>";
-
-			} else {
-				echo "<h4>Ville introuvable</h4>";
-			}
-		} else {
-			echo "<h4>Nom de ville manquant à la requette</h4>";
-		}
-	 ?>
+            if (isset($_GET["town"])) {
+                $town = $_GET["town"];
+                echo "<h1>$town</h1>";
+                echo "<div><input type='button' value='S'ajouter'/><input type='button' value='Mettre à jour/></php>";
+                if (is_file("town/" . $town . "/citizen.json")) {
+                    $citizens = file_get_contents("town/" . $town . "/citizen.json");
+                    $array = json_decode($citizens, true);
+                    echo "<table>";
+                    echo "<tr><th>Pseudo</th><th>Heros</th><th>JH Cumulé</th></tr>";
+                    foreach ($array['citizen'] as $pseudo => $citizen) {
+                        echo "<tr><td>$pseudo</td></tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    echo "<h4>Ville introuvable</h4>";
+                }
+            } else {
+                echo "<h4>Nom de ville manquant à la requette</h4>";
+            }
+            ?>
         </div>
         <script type="text/javascript" src="searcher.js"></script>
         <script type="text/javascript" src="script.js"></script>
