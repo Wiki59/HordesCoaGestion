@@ -3,7 +3,6 @@ session_start();
 $token = uniqid(rand(), true);
 $_SESSION['token'] = $token;
 $_SESSION['token_time'] = time();
-//include("info.php?state=Ok&code=" . $_GET["code"]);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -30,8 +29,8 @@ $_SESSION['token_time'] = time();
                 $town = $_GET["town"];
                 echo "<h1>$town</h1>";
                 echo "<div>";
-		echo "<input class='buttonStyle1' type='button' value='S&apos;ajouter' onclick='addMe('" . $_GET["town"] . "')' />";
-		echo "<input class='buttonStyle1' type='button' value='Mettre à jour' onclick='majMe('" . $_GET["town"] . "')' />";
+		echo "<input class='buttonStyle1' type='button' value='S&apos;ajouter' onclick='addMe('$town')'/>";
+		echo "<input class='buttonStyle1' type='button' value='Mettre à jour' onclick='majMe('$town')'/>";
 		echo "</div>";
 		echo "<div id ='boxInfo'></div>";
                 if (is_file("town/" . $town . "/citizen.json")) {
@@ -50,7 +49,7 @@ $_SESSION['token_time'] = time();
                 echo "<h4>Nom de ville manquant à la requette</h4>";
             }
             ?>
-        </div>
+	</div>
         <script type="text/javascript" src="searcher.js"></script>
         <script type="text/javascript" src="script.js"></script>
     </body>

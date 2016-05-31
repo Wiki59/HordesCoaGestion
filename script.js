@@ -6,14 +6,14 @@ $.get("info.php?state=Ok&code=" + code, function (data) {
     }
 });
 
-var add = function addMe(town) {
-    $.post("/newCitizen.php?town=" + town, function (data) {
+function addMe(town) {
+    $.post("/newCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 };
 
 var maj = function majMe(town) {
-    $.post("/majCitizen.php?town=" + town, function (data) {
+    $.post("/majCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 };
