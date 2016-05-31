@@ -10,10 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             $_SESSION["token"] == $_POST["token"] &&
             $_SESSION["token_time"] >= (time() - (10 * 60) &&
             isset($_POST["town"]) &&
-            isset($_POST["nom"])
+		isset($_POST["user"])
             )) {
         if (is_dir("/town/" . $_POST["town"])) {
-            fopen("/town/" . $_POST["town"] . "/citizen.json");
+            $fd = fopen("/town/" . $_POST["town"] . "/citizen.json");
+
         } else {
             echo "Citoyen déjà présent";
         }

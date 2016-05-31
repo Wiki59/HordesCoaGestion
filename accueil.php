@@ -1,9 +1,8 @@
 <?php
 session_start();
 $token = uniqid(rand(), true);
-$_SESSION['token'] = $token;
-$_SESSION['token_time'] = time();
-//include("info.php?state=Ok&code=" . $_GET["code"]);
+$_SESSION["token"] = $token;
+$_SESSION["token_time"] = time();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -19,7 +18,7 @@ $_SESSION['token_time'] = time();
         <script type="text/javascript" src="jquery.js"></script>
         <script type="text/javascript" src="jquery-ui.js"></script>
         <script type="text/javascript">
-            var code = "<?php echo $_GET["code"]; ?>";
+            var code = "<?php echo $_GET['code']; ?>";
         </script>
     </head>
     <body>
