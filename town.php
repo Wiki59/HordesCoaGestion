@@ -30,8 +30,8 @@ $_SESSION['token_time'] = time();
                 $town = $_GET["town"];
                 echo "<h1>$town</h1>";
                 echo "<div>";
-		echo "<input class='buttonStyle1' type='button' value='S&apos;ajouter' onclick='addMe(" . $_GET["town"] . ")' />";
-		echo "<input class='buttonStyle1' type='button' value='Mettre à jour' onclick='majMe(" . $_GET["town"] . ")' />";
+		echo "<input class='buttonStyle1' type='button' value='S&apos;ajouter' onclick='addMe('" . $_GET["town"] . "')' />";
+		echo "<input class='buttonStyle1' type='button' value='Mettre à jour' onclick='majMe('" . $_GET["town"] . "')' />";
 		echo "</div>";
 		echo "<div id ='boxInfo'></div>";
                 if (is_file("town/" . $town . "/citizen.json")) {
