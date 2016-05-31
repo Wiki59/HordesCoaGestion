@@ -5,3 +5,11 @@ $.get("info.php?state=Ok&code=" + code, function (data) {
 	$("#mainLabel").html(user['pseudo']);
 	}
 });
+
+function addMe(town) {
+
+}
+
+function majMe(town) {
+
+}

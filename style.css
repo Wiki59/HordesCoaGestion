@@ -78,3 +78,18 @@ h2 {
 td {
 	padding: 5px;
 }
+
+.buttonStyle1 {
+	border: solid black 1px;
+	background: rgba(230, 230, 230, 0.5);
+	margin: 30px;
+}
+
+.buttonStyle1:hover {
+	background: rgba(210, 210, 255, 0.7);
+}
+
+#boxInfo {
+	color: green;
+	margin-bottom: 30px;
+}
