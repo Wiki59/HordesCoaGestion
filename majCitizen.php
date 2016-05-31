@@ -7,15 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
 } else {
     session_start();
-    if (/*isset($_SESSION["token"]) && isset($_POST["token"]) && $_SESSION["token"] == $_POST["token"] &&*/ isset($_POST["town"]) && isset($_SESSION["user"])) {
+    if (/* isset($_SESSION["token"]) && isset($_POST["token"]) && $_SESSION["token"] == $_POST["token"] && */ isset($_POST["town"]) && isset($_SESSION["user"])) {
         if (is_dir("/town/" . $_POST["town"])) {
             $citizens = file_get_contents("/town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
             if (array_key_exists($pseudo, $array_citizen)) {
-                echo "Citoyen déjà dans la liste";
-            } else {
                 $pdc = 2;
                 if ($user['job'] == "jgard") {
                     $pdc += 2;
@@ -33,43 +31,17 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 if ($user['jhCumul'] > 121) {
                     ++$present;
                 }
-                $array_citizen['citizen'][$pseudo] = array(
-                    "lastPow" => lastPow($user["jhCumul"]),
-                    "job" => $user['job'],
-                    "nbCamp" => 0,
-                    "pdc" => $pdc,
-                    "nvRuin" => 0,
-                    "apag" => false,
-                    "rvMorning" => false,
-                    "arma" => $user["armag"],
-                    "ginfec" => $user["ginfec"],
-                    "rescue" => $user["hero"],
-                    "rdh" => $user["hero"],
-                    "upper" => $user["hero"],
-                    "solder" => ($user["jhCumul"] > 25),
-                    "ss" => ($user["jhCumul"] > 135),
-                    "clean" => true,
-                    "armored" => ($user["jhCumul"] > 181),
-                    "deathtrap" => ($user["jhCumul"] > 211),
-                    "trouvaille" => $present,
-                    "campPro" => ($user["jhCumul"] > 301),
-                    "archi" => ($user["jhCumul"] > 721),
-                    "veilPro" => ($user["jhCumul"] > 1000),
-                    "forBan" => false,
-                    "forGoul" => false,
-                    "jhLeft" => 0,
-                    "role" => "",
-                    "com" => "",
-                    "contact" => "",
-                    "isGhost" => $user["isGhost"],
-                    "hero" => $user["hero"],
-                    "dateMaj" => \DateTime(),
-                    "jhCumul" => $user["jhCumul"],
-                    "reservist" => false,
-                );
+                $user_json = $array_citizen['citizen'][$pseudo];
+                $user_json["lastPow"] = lastPow($user_json["jhCumul"]);
+                $user_json["job"] = $user["job"];
+                $user_json["dateMaj"] = new DateTime();
+                $user_json["hero"] = $user["hero"];
+                $user_json["isGhost"] = $user["isGhost"];
                 $new_citizens = json_encode($array_citizen);
                 file_put_contents("/town/" . $_POST["town"] . "/citizen.json", $new_citizens);
-                echo "Citoyen ajouté";
+                echo "Citoyen mis à jour";
+            } else {
+                echo "Citoyen n'est pas dans la liste";
             }
         } else {
             echo "Ville introuvable";
