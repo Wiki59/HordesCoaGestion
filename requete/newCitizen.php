@@ -9,12 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     session_start();
     if (isset($_POST["town"]) && isset($_SESSION["user"])) {
         if (is_dir("town/" . $_POST["town"])) {
-        	echo "ok";    
-	$citizens = file_get_contents("town/" . $_POST["town"] . "/citizen.json");
+            $citizens = file_get_contents("../town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
-		$pseudo = "wiki";
             if (array_key_exists($pseudo, $array_citizen)) {
                 echo "Citoyen déjà dans la liste";
             } else {
@@ -69,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                     "jhCumul" => $user["jhCumul"],
                     "reservist" => false,
                 );
-		$new_citizens = json_encode($array_citizen);
-		file_put_contents("town/" . $_POST["town"] . "/citizen.json", $new_citizens);
+                $new_citizens = json_encode($array_citizen);
+                file_put_contents("town/" . $_POST["town"] . "/citizen.json", $new_citizens);
                 echo "Citoyen ajouté";
             }
         } else {
