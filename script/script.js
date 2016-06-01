@@ -6,14 +6,16 @@ $.get("../requete/info.php?state=Ok&code=" + code, function (data) {
     }
 });
 
-function addMe(town) {
-    $.post("../requete/newCitizen.php", {town: town}, function (data) {
-        $("#boxInfo").html(data);
-    });
-};
+var town = $("#town").val();
 
-var maj = function majMe(town) {
-    $.post("../requete/majCitizen.php", {town: town}, function (data) {
+$("#addC").on("click", function() {
+    $.post("/newCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
-};
+});
+
+$("#majC").on("click", function() {
+    $.post("/majCitizen.php", {town: town}, function (data) {
+        $("#boxInfo").html(data);
+    });
+});
