@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
      */
             true
     ) {
-        $dir = dir("town");
+        $dir = dir("../town");
         $town = array();
         while (false !== ($f = $dir->read())) {
             if (!is_dir($f) && $f != "." && f != "..") {

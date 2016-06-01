@@ -19,7 +19,7 @@
                 $citizens = file_get_contents("town/" . $town . "/citizen.json");
                 $array = json_decode($citizens, true);
                 echo "<table>";
-                echo "<tr><th>Pseudo</th><th>Heros</th><th>JH Cumulé</th></tr>";
+                echo "<tr><th>Pseudo /*+starHeros*/</th><th>Dernier pouvoir</th><th>Métier</th><th>PDC</th><th>Niveau ruines</th><th>Armageddon</th><th>G. Contamination</th><th>APAG</th><th>Sauvetage</th><th>RDH</th><th>Uppercut sauvage</th><th>Camaraderie</th><th>Second souffle</th><th>Nv. Trouvaille</th><th>Trompe la mort</th><th>Campeur pro</th><th>Veilleur pro</th><th>Bann</th><th>Goule</th><th>JH restant</th><th>Rôle</th><th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
                     echo "<tr><td>$pseudo</td></tr>";
                 }

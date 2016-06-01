@@ -9,13 +9,13 @@ $.get("../requete/info.php?state=Ok&code=" + code, function (data) {
 var town = $("#town").val();
 
 $("#addC").on("click", function() {
-    $.post("/newCitizen.php", {town: town}, function (data) {
+    $.post("requete/newCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 });
 
 $("#majC").on("click", function() {
-    $.post("/majCitizen.php", {town: town}, function (data) {
+    $.post("requete/majCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 });
