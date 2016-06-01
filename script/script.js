@@ -1,5 +1,5 @@
 var user;
-$.get("info.php?state=Ok&code=" + code, function (data) {
+$.get("../requete/info.php?state=Ok&code=" + code, function (data) {
     user = JSON.parse(data);
     if (user['pseudo'] != undefined) {
         $("#mainLabel").html(user['pseudo']);
@@ -7,13 +7,13 @@ $.get("info.php?state=Ok&code=" + code, function (data) {
 });
 
 function addMe(town) {
-    $.post("/newCitizen.php", {town: town}, function (data) {
+    $.post("../requete/newCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 };
 
 var maj = function majMe(town) {
-    $.post("/majCitizen.php", {town: town}, function (data) {
+    $.post("../requete/majCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 };

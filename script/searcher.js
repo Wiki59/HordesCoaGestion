@@ -8,7 +8,7 @@ $(".searcher").on("focus", function () {
     target.val("");
     $.ajax({
         type: "POST",
-        url: "allTown.php?token=" + $("#token").val(),
+        url: "../requete/allTown.php?token=" + $("#token").val(),
         success: function (data) {
             var maper = [];
             JSON.parse(data, function (k, v) {
