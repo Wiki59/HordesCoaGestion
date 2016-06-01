@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 } else {
     session_start();
     if (isset($_POST["town"]) && isset($_SESSION["user"])) {
-        if (is_dir("town/" . $_POST["town"])) {
+        if (is_dir("../town/" . $_POST["town"])) {
             $citizens = file_get_contents("../town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
@@ -17,7 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 echo "Citoyen déjà dans la liste";
             } else {
                 $pdc = 2;
-                if ($user['job'] == "jgard") {
+                $present = 1;
+		if ($user['job'] == "jgard") {
                     $pdc += 2;
                 }
                 if ($user['jhCumul'] > 61) { // Corp sain
@@ -26,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 if ($user['jhCumul'] > 181) { // Armoire à glace
                     ++$pdc;
                 }
-                $present = 1;
                 if ($user['jhCumul'] > 91) {
                     ++$present;
                 }
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 }
                 $array_citizen['citizen'][$pseudo] = array(
                     "lastPow" => lastPow($user["jhCumul"]),
-                    "job" => $user['job'],
+                    "job" => $user["job"],
                     "nbCamp" => 0,
                     "pdc" => $pdc,
                     "nvRuin" => 0,
@@ -58,18 +58,18 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                     "forBan" => false,
                     "forGoul" => false,
                     "jhLeft" => 0,
-                    "role" => "",
-                    "com" => "",
-                    "contact" => "",
+                    "role" => " ",
+                    "com" => " ",
+                    "contact" => " ",
                     "isGhost" => $user["isGhost"],
                     "hero" => $user["hero"],
-                    "dateMaj" => \DateTime(),
+                    "dateMaj" => new DateTime(),
                     "jhCumul" => $user["jhCumul"],
                     "reservist" => false,
                 );
                 $new_citizens = json_encode($array_citizen);
-                file_put_contents("town/" . $_POST["town"] . "/citizen.json", $new_citizens);
-                echo "Citoyen ajouté";
+                file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
+                echo "Citoyen ajouté ";
             }
         } else {
             echo "Ville \"" . $_POST["town"] . "\" introuvable";
