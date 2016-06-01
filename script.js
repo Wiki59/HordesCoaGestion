@@ -1,19 +1,20 @@
-var user;
-$.get("info.php?state=Ok&code=" + code, function (data) {
+var user; $.get("info.php?state=Ok&code=" + code, function (data) {
     user = JSON.parse(data);
     if (user['pseudo'] != undefined) {
         $("#mainLabel").html(user['pseudo']);
     }
 });
 
-function addMe(town) {
+var town = $("#town").val();
+
+$("#addC").on("click", function() {
     $.post("/newCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
-};
+});
 
-var maj = function majMe(town) {
+$("#majC").on("click", function() {
     $.post("/majCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
-};
+});
