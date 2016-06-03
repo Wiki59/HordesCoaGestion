@@ -10,7 +10,7 @@
             $town = $_GET["town"];
             echo "<h1>$town</h1>";
             echo "<div>";
-	echo "<input type='hidden' value='$town' id='town'/>";
+            echo "<input type='hidden' value='$town' id='town'/>";
             echo "<input class='buttonStyle1' type='button' value='S&apos;ajouter' id='addC'/>";
             echo "<input class='buttonStyle1' type='button' value='Mettre à jour' id='majC'/>";
             echo "</div>";
@@ -42,7 +42,11 @@
 			<th>Rôle</th>
 			<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
-                    echo "<tr><td>$pseudo</td></tr>";
+                    $toEcho .= "<tr><td>$pseudo</td>";
+                    $toEcho .= $citizen["job"];
+                    $toEcho .= $citizen["héros"];
+                    $toEcho .= "</tr>";
+                    echo $toEcho;
                 }
                 echo "</table>";
             } else {
