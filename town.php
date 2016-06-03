@@ -43,8 +43,8 @@
 			<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
                     $toEcho .= "<tr><td>$pseudo</td>";
+                    $toEcho .= ($citizen["héro"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "" ;
                     $toEcho .= $citizen["job"];
-                    $toEcho .= $citizen["héros"];
                     $toEcho .= "</tr>";
                     echo $toEcho;
                 }
