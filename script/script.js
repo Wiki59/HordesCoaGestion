@@ -19,3 +19,8 @@ $("#majC").on("click", function() {
         $("#boxInfo").html(data);
     });
 });
+
+$("#jhCumulDiv").on("click",function() {
+   $("#jhCumulDivString").toggle();
+   $("#jhCumulDivNumber").toggle();
+});
