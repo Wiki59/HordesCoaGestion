@@ -49,7 +49,7 @@
                         $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
                         $toEcho .= "<tr><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
-                        $toEcho .= ($citizen["pseudo"] === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
+                        $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
                         $toEcho .= "<td id='jhCumulDiv'><div id='jhCumulDivString'>" . $citizen["lastPow"] . "</div>";
                         $toEcho .= "<div id='jhCumulDivNumber' hidden><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
@@ -79,7 +79,7 @@
                     } else {
                         $toEcho .= "<tr><td>$pseudo";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
-                        $toEcho .= ($citizen["pseudo"] === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
+                        $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
                         $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
                         $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
