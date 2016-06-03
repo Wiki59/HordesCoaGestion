@@ -8,7 +8,7 @@
         echo "<div id='content'>";
         if (isset($_GET["town"])) {
             $town = $_GET["town"];
-            echo "<h1>$town :" . sizeof($array['citizen']) . " citoyen(s)</h1>";
+            echo "<h1>$town</h1>";
             echo "<div>";
             echo "<input type='hidden' value='$town' id='town'/>";
             echo "<input class='buttonStyle1' class='playerControl' type='button' value='S&apos;ajouter' id='addC'/>";
@@ -18,6 +18,7 @@
             if (is_file("town/" . $town . "/citizen.json")) {
                 $citizens = file_get_contents("town/" . $town . "/citizen.json");
                 $array = json_decode($citizens, true);
+                echo sizeof($array['citizen']);
                 echo "<table>";
                 echo "<tr><th>Pseudo</th>
 			<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>

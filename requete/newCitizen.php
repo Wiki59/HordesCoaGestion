@@ -18,20 +18,22 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             } else {
                 $pdc = 2;
                 $present = 1;
-		if ($user['job'] == "jgard") {
+                if ($user['job'] == "jgard") {
                     $pdc += 2;
                 }
-                if ($user['jhCumul'] > 61) { // Corp sain
-                    ++$pdc;
-                }
-                if ($user['jhCumul'] > 181) { // Armoire à glace
-                    ++$pdc;
-                }
-                if ($user['jhCumul'] > 91) {
-                    ++$present;
-                }
-                if ($user['jhCumul'] > 121) {
-                    ++$present;
+                if ($user['hero']) {
+                    if ($user['jhCumul'] > 61) { // Corp sain
+                        ++$pdc;
+                    }
+                    if ($user['jhCumul'] > 181) { // Armoire à glace
+                        ++$pdc;
+                    }
+                    if ($user['jhCumul'] > 91) {
+                        ++$present;
+                    }
+                    if ($user['jhCumul'] > 121) {
+                        ++$present;
+                    }
                 }
                 $array_citizen['citizen'][$pseudo] = array(
                     "lastPow" => lastPow($user["jhCumul"]),
