@@ -18,13 +18,13 @@
             if (is_file("town/" . $town . "/citizen.json")) {
                 $citizens = file_get_contents("town/" . $town . "/citizen.json");
                 $array = json_decode($citizens, true);
-                echo "<table>";
+		echo "<table>";
                 echo "<tr><th>Pseudo</th>
 			<th><img src='ressource/kniff.gif' alt='Dernier pouvoir' width='16' height='16'></th>
 			<th>Job</th>
-			<th><img src='ressource/h_guard.gif' alt='Point de défense' width='16' height='16'></th>
-			<th><img src='ressource/r_ruine.gif' alt='Niveau d'expertise pour les ruines' width='16' height='16'></th>
-			<th><img src='ressource/arma.gif' alt='Témoins de l'armageddon width='16' height='16'></th>
+			<th><img src='ressource/h_guard.gif' title='Point de défense' width='16' height='16'></th>
+			<th><img src='ressource/r_ruine.gif' title='Niveau d&apos;expertise pour les ruines' width='16' height='16'></th>
+			<th><img src='ressource/arma.gif' title='Témoins de l'armageddon width='16' height='16'></th>
 			<th><img src='ressource/r_ginfec.gif' alt='Grande infection' width='16' height='16'></th>
 			<th><img src='ressource/apag.gif' alt='Appareil Photo de l'Avant Guerre width='16' height='16'></th>
 			<th><img src='ressource/h_calim.gif' alt='Sauvetage' width='16' height='16'></th>
@@ -44,7 +44,7 @@
                 foreach ($array['citizen'] as $pseudo => $citizen) {
                     if ($pseudo === $_SESSION["user"]["pseudo"]) {
                         $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
-                        $toEcho .= "<tr><td><b>$pseudo ok</b>";
+                        $toEcho .= "<tr><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
                         $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
