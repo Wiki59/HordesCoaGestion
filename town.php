@@ -43,6 +43,7 @@
 			<th>Rôle</th>
 			<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
+                    $toEcho = "";
                     if ($pseudo === $_SESSION["user"]["pseudo"]) {
                         $toEcho .= "<input type='hidden' id='playerPresent' value='true'/>";
                         $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
