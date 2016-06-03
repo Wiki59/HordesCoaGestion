@@ -14,12 +14,13 @@ $(".searcher").on("focus", function () {
             JSON.parse(data, function (k, v) {
                 maper.push(v);
             });
+
             // Affichage en autocomplete
             target.autocomplete({
                 source: maper,
                 autoFocus: true,
                 delay: 50,
-                response: function (e, map) {
+		response: function (e, map) {
                     resultTab = [];
                     $.each(map, function (k, v) {
                         $.each(v, function (key, val) {
@@ -29,6 +30,7 @@ $(".searcher").on("focus", function () {
                     resultShow();
                 }
             });
+
             // Affichage en placeholder
             if (maper.length > 0) {
                 target.attr("placeholder", maper[parseInt(target.attr("plcHoldI"))]);
@@ -48,6 +50,7 @@ $(".searcher").on("focus", function () {
             } else {
                 target.attr("placeholder", "...");
             }
+
             // Affichage liste, dans une div#result
             target.on("keydown.resulter", resultShow = function (e) {
                 if (e == null || e.keyCode != 13) {
