@@ -120,8 +120,8 @@
                         $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
                         $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
                         $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
-                        $toEcho .= "<td>" . $citizen["role"] . "</td>";
-                        $toEcho .= "<td>" . $citizen["com"] . "</td>";
+                        $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
+                        $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
                         $toEcho .= "</tr>";
                         echo $toEcho;
                     }

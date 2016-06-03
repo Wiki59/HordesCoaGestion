@@ -33,7 +33,26 @@ $("#mvC").on("click", function () {
 $("#majC").on("click", function () {
     $.post("requete/majCitizen.php",
             {
-                town: town
+                town: town,
+                jhCumul: $("name='jhCumul'"),
+                pdc: $("name='pdc'"),
+                nvRuin: $("name='nvRuin'"),
+                arma: $("name='arma'"),
+                apag: $("name='apag'"),
+                rescue: $("name='rescue'"),
+                rdh: $("name='rdh'"),
+                upper: $("name='upper'"),
+                solder: $("name='solder'"),
+                ss: $("name='ss'"),
+                trouvaille: $("name='trouvaille'"),
+                deathtrap: $("name='deathtrap'"),
+                campPro: $("name='campPro'"),
+                veilPro: $("name='veilPro'"),
+                forBan: $("name='forBan'"),
+                forGoul: $("name='forGoul'"),
+                jhLeft: $("name='jhLeft'"),
+                role: $("name='role'"),
+                com: $("name='com'")
             }, function (data) {
         $("#boxInfo").html(data);
     });
