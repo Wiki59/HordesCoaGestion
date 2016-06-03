@@ -121,6 +121,12 @@ function jobToImage($job) {
     switch ($job) {
         case "collec":
             return "<img src='ressource/shovel.gif' title='Pelleteur' width='16' height='16'>";
+	break;
+	case "guardian":
+            return "<img src='ressource/h_guard.gif' title='Pelleteur' width='16' height='16'>";
+	default:
+		return $job;
+	break;
     }
 }
 ?>

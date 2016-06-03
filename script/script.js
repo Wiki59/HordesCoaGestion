@@ -21,6 +21,7 @@ $("#majC").on("click", function() {
 });
 
 $("#jhCumulDiv").on("click",function() {
+	console.log("ok");
    $("#jhCumulDivString").toggle();
    $("#jhCumulDivNumber").toggle();
 });
