@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 );
                 $new_citizens = json_encode($array_citizen);
                 file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
-                echo "Citoyen ajouté ";
+                echo "Citoyen ajouté";
             }
         } else {
             echo "Ville \"" . $_POST["town"] . "\" introuvable";

@@ -14,6 +14,12 @@ $("#addC").on("click", function() {
     });
 });
 
+$("#lvC").on("click", function() {
+    $.post("requete/removeCitizen.php", {town: town}, function (data) {
+        $("#boxInfo").html(data);
+    });
+});
+
 $("#majC").on("click", function() {
     $.post("requete/majCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
@@ -25,3 +31,8 @@ $("#jhCumulDiv").on("click",function() {
    $("#jhCumulDivString").toggle();
    $("#jhCumulDivNumber").toggle();
 });
+
+if ($("#playerPresent").val() === "true") {
+    $(".playerControler").attr("value", "Se retirer");
+    $(".playerControler").attr("id", "mvC");
+}

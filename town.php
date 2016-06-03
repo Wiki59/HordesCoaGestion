@@ -8,10 +8,10 @@
         echo "<div id='content'>";
         if (isset($_GET["town"])) {
             $town = $_GET["town"];
-            echo "<h1>$town</h1>";
+            echo "<h1>$town :" . sizeof($array['citizen']) . " citoyen(s)</h1>";
             echo "<div>";
             echo "<input type='hidden' value='$town' id='town'/>";
-            echo "<input class='buttonStyle1' type='button' value='S&apos;ajouter' id='addC'/>";
+            echo "<input class='buttonStyle1' class='playerControl' type='button' value='S&apos;ajouter' id='addC'/>";
             echo "<input class='buttonStyle1' type='button' value='Mettre à jour' id='majC'/>";
             echo "</div>";
             echo "<div id='boxInfo'></div>";
@@ -43,6 +43,7 @@
 			<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
                     if ($pseudo === $_SESSION["user"]["pseudo"]) {
+                        $toEcho .= "<input type='hidden' id='playerPresent' value='true'/>";
                         $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
                         $toEcho .= "<tr><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
