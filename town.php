@@ -42,31 +42,63 @@
 			<th>Rôle</th>
 			<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
-                    $toEcho .= "<tr><td>$pseudo</td>";
-                    $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "";
-                    $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
-                    $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
-                    $toEcho .= "<td>" . $citizen["pdc"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["nvRuin"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["arma"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["ginfec"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["apag"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["rescue"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["rdh"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["upper"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["solder"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["ss"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["trouvaille"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["deathtrap"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["campPro"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["veilPro"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
-                    $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
-                    $toEcho .= "<td></td>";
-                    $toEcho .= "<td></td>";
-                    $toEcho .= "</tr>";
-                    echo $toEcho;
+                    if ($pseudo === $_SESSION["user"]["pseudo"]) {
+                        $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
+                        $toEcho .= "<tr><td><b>$pseudo ok</b>";
+                        $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "";
+                        $toEcho .= "</td>";
+                        $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
+                        $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
+                        $toEcho .= "<td>" . $citizen["pdc"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["nvRuin"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["arma"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["ginfec"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["apag"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["rescue"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["rdh"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["upper"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["solder"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["ss"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["trouvaille"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["deathtrap"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["campPro"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["veilPro"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
+                        $toEcho .= "<td></td>";
+                        $toEcho .= "<td></td>";
+                        $toEcho .= "</tr>";
+                        $toEcho .= "</form>";
+                        echo $toEcho;
+                    } else {
+                        $toEcho .= "<tr><td>$pseudo";
+                        $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "";
+                        $toEcho .= "</td>";
+                        $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
+                        $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
+                        $toEcho .= "<td>" . $citizen["pdc"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["nvRuin"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["arma"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["ginfec"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["apag"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["rescue"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["rdh"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["upper"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["solder"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["ss"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["trouvaille"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["deathtrap"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["campPro"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["veilPro"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
+                        $toEcho .= "<td></td>";
+                        $toEcho .= "<td></td>";
+                        $toEcho .= "</tr>";
+                        echo $toEcho;
+                    }
                 }
                 echo "</table>";
             } else {
