@@ -10,7 +10,7 @@ $.get("../requete/info.php?state=Ok&code=" + code, function (data) {
         console.log("ok");
     }
     if (user['pseudo'] === "WiKi59") {
-        $("html, body").css("background-image", "url(../ressource/wrench.gif)");
+        $("html, body").css("background-image", "url(../ressource/shovel.gif)");
         $("html, body").css("background-repeat", "repeat");
         console.log("ok");
     }
