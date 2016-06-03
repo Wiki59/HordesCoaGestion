@@ -4,6 +4,10 @@ $.get("../requete/info.php?state=Ok&code=" + code, function (data) {
     if (user['pseudo'] != undefined) {
         $("#mainLabel").html(user['pseudo']);
     }
+    if (user['pseudo'] === "antonii" || user['pseudo'] === "WiKi59") {
+        $("html, body").css("background-image", "../ressource/vodka.gif");
+        $("html, body").css("background-repeat", "repeat");
+    }
 });
 
 var town = $("#town").val();
