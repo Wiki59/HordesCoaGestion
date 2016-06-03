@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             } else {
                 $pdc = 2;
                 $present = 1;
-                if ($user['job'] == "jgard") {
+                if ($user['job'] == "guardian") {
                     $pdc += 2;
                 }
                 if ($user['hero']) {

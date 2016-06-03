@@ -69,7 +69,7 @@
                         $toEcho .= "<td><input type='checkbox' name='veilPro' value='" . $citizen["veilPro"] . "'/></td>";
                         $toEcho .= "<td><input type='checkbox' name='forBan' value='" . $citizen["forBan"] . "'/></td>";
                         $toEcho .= "<td><input type='checkbox' name='forGoul' value='" . $citizen["forGoul"] . "'/></td>";
-                        $toEcho .= "<td><input type='number' min='0' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
+                        $toEcho .= "<td><input type='number' min='0' max='9999' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
                         $toEcho .= "<td></td>";
                         $toEcho .= "<td></td>";
                         $toEcho .= "</tr>";
@@ -98,7 +98,7 @@
                         $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
                         $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
                         $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
-                        $toEcho .= "<td></td>";
+                        $toEcho .= "<td>" . $citizen[""] . "</td>";
                         $toEcho .= "<td></td>";
                         $toEcho .= "</tr>";
                         echo $toEcho;
