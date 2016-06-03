@@ -79,6 +79,7 @@
                     } else {
                         $toEcho .= "<tr><td>$pseudo";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
+                        $toEcho .= ($citizen["pseudo"] === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
                         $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
                         $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
