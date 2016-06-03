@@ -19,10 +19,10 @@
                 $citizens = file_get_contents("town/" . $town . "/citizen.json");
                 $array = json_decode($citizens, true);
                 echo "<table>";
-                echo "<tr><th>Pseudo </th>
-			<th>Dernier pouvoir</th>
-			<th>Métier </th>
-			<th>PDC </th>
+                echo "<tr><th>Pseudo</th>
+			<th>DP</th>
+			<th>Job</th>
+			<th><img src='ressource/h_guard.gif' alt='Point de défense' width='16' height='16'></th>
 			<th>Niveau ruines</th>
 			<th>Armageddon </th>
 			<th>G. Contamination</th>
