@@ -43,8 +43,28 @@
 			<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
                     $toEcho .= "<tr><td>$pseudo</td>";
-                    $toEcho .= ($citizen["héro"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "" ;
-                    $toEcho .= $citizen["job"];
+                    $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' alt='Heros' width='16' height='16'>" : "";
+                    $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["pdc"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["nvRuin"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["arma"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["ginfec"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["apag"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["rescue"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["rdh"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["upper"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["solder"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["ss"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["trouvaille"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["deathtrap"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["campPro"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["veilPro"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["forBan"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["forGoul"]) . "</td>";
+                    $toEcho .= "<td>" . jobToImage($citizen["jhLeft"]) . "</td>";
+                    $toEcho .= "<td></td>";
+                    $toEcho .= "<td></td>";
                     $toEcho .= "</tr>";
                     echo $toEcho;
                 }
@@ -61,3 +81,13 @@
         <script type="text/javascript" src="script/script.js"></script>
     </body>
 </html>
+
+<?php
+
+function jobToImage($job) {
+    switch ($job) {
+        case "collec":
+            return "<img src='ressource/shovel.gif' alt='Pelleteur' width='16' height='16'>";
+    }
+}
+?>
