@@ -18,7 +18,7 @@
             if (is_file("town/" . $town . "/citizen.json")) {
                 $citizens = file_get_contents("town/" . $town . "/citizen.json");
                 $array = json_decode($citizens, true);
-		echo "<table>";
+                echo "<table>";
                 echo "<tr><th>Pseudo</th>
 			<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>
 			<th>Job</th>
@@ -47,9 +47,9 @@
                         $toEcho .= "<tr><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
-                        $toEcho .= "<td>" . $citizen["lastPow"] . "</td>";
-                        $toEcho .= "<td id='jhCumulDiv'><div id='jhCumulDivString'>" . jobToImage($citizen["job"]) . "</div>";
+                        $toEcho .= "<td id='jhCumulDiv'><div id='jhCumulDivString'>" . $citizen["lastPow"] . "</div>";
                         $toEcho .= "<div id='jhCumulDivNumber' hidden><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
+                        $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
                         $toEcho .= "<td>" . $citizen["pdc"] . "</td>";
                         $toEcho .= "<td>" . $citizen["nvRuin"] . "</td>";
                         $toEcho .= "<td>" . $citizen["arma"] . "</td>";
@@ -121,12 +121,12 @@ function jobToImage($job) {
     switch ($job) {
         case "collec":
             return "<img src='ressource/shovel.gif' title='Pelleteur' width='16' height='16'>";
-	break;
-	case "guardian":
+            break;
+        case "guardian":
             return "<img src='ressource/h_guard.gif' title='Pelleteur' width='16' height='16'>";
-	default:
-		return $job;
-	break;
+        default:
+            return $job;
+            break;
     }
 }
 ?>
