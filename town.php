@@ -49,6 +49,7 @@
                         $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
                         $toEcho .= "<tr><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
+                        $toEcho .= ($citizen["pseudo"] === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
                         $toEcho .= "<td id='jhCumulDiv'><div id='jhCumulDivString'>" . $citizen["lastPow"] . "</div>";
                         $toEcho .= "<div id='jhCumulDivNumber' hidden><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
@@ -124,12 +125,12 @@ function jobToImage($job) {
     switch ($job) {
         case "collec":
             return "<img src='ressource/shovel.gif' title='Pelleteur' width='16' height='16'>";
-            break;
         case "guardian":
-            return "<img src='ressource/h_guard.gif' title='Pelleteur' width='16' height='16'>";
+            return "<img src='ressource/h_guard.gif' title='Portière' width='16' height='16'>";
+        case "basic":
+            return "<img src='ressource/citizen.gif' title='Civil' width='16' height='16'>";
         default:
             return $job;
-            break;
     }
 }
 ?>
