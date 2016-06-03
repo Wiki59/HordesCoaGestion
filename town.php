@@ -46,8 +46,7 @@
                     $toEcho = "";
                     if ($pseudo === $_SESSION["user"]["pseudo"]) {
                         $toEcho .= "<input type='hidden' id='playerPresent' value='true'/>";
-                        $toEcho .= "<form action='requete/majCitizen.php' method='POST'>";
-                        $toEcho .= "<tr><td><b>$pseudo</b>";
+                        $toEcho .= "<tr style='background-color: rgb(235, 180, 180)'><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                         $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                         $toEcho .= "</td>";
@@ -74,7 +73,6 @@
                         $toEcho .= "<td></td>";
                         $toEcho .= "<td></td>";
                         $toEcho .= "</tr>";
-                        $toEcho .= "</form>";
                         echo $toEcho;
                     } else {
                         $toEcho .= "<tr><td>$pseudo";

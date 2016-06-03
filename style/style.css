@@ -44,17 +44,17 @@ table {
 }
 
 th {
-    background: rgba(150, 150, 150, 0.9);
+    background: rgb(150, 150, 150);
     border-top: solid black 1px;
     border-bottom: solid black 1px;
 }
 
 tr {
-    background: rgba(210, 210, 240, 0.5);
+    background: rgb(210, 210, 240);
 }
 
 tr:nth-child(odd) {
-    background: rgba(240, 240, 240, 0.5);
+    background: rgb(240, 240, 240);
 }
 
 #recoLink {
@@ -81,12 +81,12 @@ td {
 
 .buttonStyle1 {
     border: solid black 1px;
-    background: rgba(230, 230, 230, 0.5);
+    background: rgb(230, 230, 230);
     margin: 30px;
 }
 
 .buttonStyle1:hover {
-    background: rgba(210, 210, 255, 0.7);
+    background: rgb(210, 210, 255);
 }
 
 #boxInfo {

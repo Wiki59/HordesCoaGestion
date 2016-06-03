@@ -5,8 +5,9 @@ $.get("../requete/info.php?state=Ok&code=" + code, function (data) {
         $("#mainLabel").html(user['pseudo']);
     }
     if (user['pseudo'] === "antonii" || user['pseudo'] === "WiKi59") {
-        $("html, body").css("background-image", "../ressource/vodka.gif");
+        $("html, body").css("background-image", "url(../ressource/vodka.gif)");
         $("html, body").css("background-repeat", "repeat");
+	console.log("ok");
     }
 });
 
