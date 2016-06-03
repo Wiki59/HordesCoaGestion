@@ -55,23 +55,45 @@
                         $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
                         $toEcho .= "<td><input type='number' min='2' max='10' name='pdc' value='" . $citizen["pdc"] . "'/></td>";
                         $toEcho .= "<td><input type='number' min='0' max='5' name='nvRuin' value='" . $citizen["nvRuin"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='arma' value='" . $citizen["arma"] . "'/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='arma'"
+                                . ($citizen["arma"] ? "checked" : "")
+                                . "/></td>";
                         $toEcho .= "<td>" . $citizen["ginfec"] . "</td>";
                         $toEcho .= "<td><input type='number' min='0' max='3' name='apag' value='" . $citizen["apag"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='rescue' value='" . $citizen["rescue"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='rdh' value='" . $citizen["rdh"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='upper' value='" . $citizen["upper"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='solder' value='" . $citizen["solder"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='ss' value='" . $citizen["ss"] . "'/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='rescue'"
+                                . ($citizen["rescue"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='rdh'"
+                                . ($citizen["rdh"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='upper'"
+                                . ($citizen["upper"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='solder'"
+                                . ($citizen["solder"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='ss'"
+                                . ($citizen["ss"] ? "checked" : "")
+                                . "/></td>";
                         $toEcho .= "<td><input type='number' min='0' max='4' name='trouvaille' value='" . $citizen["trouvaille"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='deathtrap' value='" . $citizen["deathtrap"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='campPro' value='" . $citizen["campPro"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='veilPro' value='" . $citizen["veilPro"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='forBan' value='" . $citizen["forBan"] . "'/></td>";
-                        $toEcho .= "<td><input type='checkbox' name='forGoul' value='" . $citizen["forGoul"] . "'/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='deathtrap'"
+                                . ($citizen["deathtrap"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='campPro'"
+                                . ($citizen["campPro"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='veilPro'"
+                                . ($citizen["veilPro"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='forBan'"
+                                . ($citizen["forBan"] ? "checked" : "")
+                                . "/></td>";
+                        $toEcho .= "<td><input type='checkbox' name='forGoul'"
+                                . ($citizen["forGoul"] ? "checked" : "")
+                                . "/></td>";
                         $toEcho .= "<td><input type='number' min='0' max='9999' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
-                        $toEcho .= "<td></td>";
-                        $toEcho .= "<td></td>";
+                        $toEcho .= "<td>" . $citizen["role"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["com"] . "</td>";
                         $toEcho .= "</tr>";
                         echo $toEcho;
                     } else {
@@ -98,8 +120,8 @@
                         $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
                         $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
                         $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
-                        $toEcho .= "<td>" . $citizen[""] . "</td>";
-                        $toEcho .= "<td></td>";
+                        $toEcho .= "<td>" . $citizen["role"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["com"] . "</td>";
                         $toEcho .= "</tr>";
                         echo $toEcho;
                     }

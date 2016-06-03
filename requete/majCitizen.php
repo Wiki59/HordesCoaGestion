@@ -7,31 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
 } else {
     session_start();
-    if (/* isset($_SESSION["token"]) && isset($_POST["token"]) && $_SESSION["token"] == $_POST["token"] && */ isset($_POST["town"]) && isset($_SESSION["user"])) {
+    if (isset($_POST["town"]) && isset($_SESSION["user"])) {
         if (is_dir("/town/" . $_POST["town"])) {
             $citizens = file_get_contents("/town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
             if (array_key_exists($pseudo, $array_citizen)) {
-                $pdc = 2;
-                if ($user['job'] == "jgard") {
-                    $pdc += 2;
-                }
-                if ($user['jhCumul'] > 61) { // Corp sain
-                    ++$pdc;
-                }
-                if ($user['jhCumul'] > 181) { // Armoire à glace
-                    ++$pdc;
-                }
-                $present = 1;
-                if ($user['jhCumul'] > 91) {
-                    ++$present;
-                }
-                if ($user['jhCumul'] > 121) {
-                    ++$present;
-                }
                 $user_json = $array_citizen['citizen'][$pseudo];
+                $user_json["jhCumul"] = lastPow($_POST["jhCumul"]);
                 $user_json["lastPow"] = lastPow($user_json["jhCumul"]);
                 $user_json["job"] = $user["job"];
                 $user_json["dateMaj"] = new DateTime();

@@ -24,14 +24,17 @@ $("#addC").on("click", function () {
     });
 });
 
-$("#lvC").on("click", function () {
+$("#mvC").on("click", function () {
     $.post("requete/removeCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
     });
 });
 
 $("#majC").on("click", function () {
-    $.post("requete/majCitizen.php", {town: town}, function (data) {
+    $.post("requete/majCitizen.php",
+            {
+                town: town
+            }, function (data) {
         $("#boxInfo").html(data);
     });
 });
