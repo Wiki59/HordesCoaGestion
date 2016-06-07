@@ -17,10 +17,10 @@
           	 	echo "<input type='hidden' value='$town' id='town'/>";
 		if (array_key_exists($pseudo, $array["citizen"])) {
                        	echo "<input class='buttonStyle1' class='playerControl' type='button' value='Se retirer' id='mvC'/>";
-           		} else {
+	           	echo "<input class='buttonStyle1' type='button' value='Mettre à jour' id='majC'/>";
+           	} else {
             		echo "<input class='buttonStyle1' class='playerControl' type='button' value='S&apos;ajouter' id='addC'/>";
 		}
-           	echo "<input class='buttonStyle1' type='button' value='Mettre à jour' id='majC'/>";
           	echo "</div>";
 	        echo "<div id='boxInfo'></div>";
        	        echo "<b>Il y a " . sizeof($array['citizen']) . " citoyen(s)</b>";

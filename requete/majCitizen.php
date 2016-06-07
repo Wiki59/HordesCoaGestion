@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ajoute l'utilisateur courrant dans la liste des citoyen
+ * Modifie l'utilisateur courrant dans la liste des citoyens, si il y est déjà
  */
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);

@@ -1,35 +1,30 @@
-var user;
-$.get("../requete/info.php?state=Ok&code=" + code, function (data) {
-    user = JSON.parse(data);
-    if (user['pseudo'] != undefined) {
-        $("#mainLabel").html(user['pseudo']);
-    }
-    if (user['pseudo'] === "antonii") {
-        $("html, body").css("background-image", "url(../ressource/vodka.gif)");
-        $("html, body").css("background-repeat", "repeat");
-        console.log("ok");
-    }
-/*
-    if (user['pseudo'] === "WiKi59") {
-        $("html, body").css("background-image", "url(../ressource/shovel.gif)");
-        $("html, body").css("background-repeat", "repeat");
-        console.log("ok");
-    }
-*/
-});
+if (pseudo === "antonii") {
+    $("html, body").css("background-image", "url(../ressource/vodka.gif)");
+    $("html, body").css("background-repeat", "repeat");
+    console.log("ok");
+}
+if (pseudo === "WiKi59") {
+    $("html, body").css("background-image", "url(../ressource/shovel.gif)");
+    $("html, body").css("background-repeat", "repeat");
+    console.log("ok");
+}
 
 var town = $("#town").val();
 
 $("#addC").on("click", function () {
     $.post("requete/newCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
-    });
+    }).done(function() {
+		refresh();
+	});
 });
 
 $("#mvC").on("click", function () {
     $.post("requete/removeCitizen.php", {town: town}, function (data) {
         $("#boxInfo").html(data);
-    });
+    }).done(function() {
+	refresh();
+	});
 });
 
 $("#majC").on("click", function () {
@@ -57,7 +52,9 @@ $("#majC").on("click", function () {
                 com: $("name='com'")
             }, function (data) {
         $("#boxInfo").html(data);
-    });
+    }).done(function () {
+	refresh();
+	});
 });
 
 $("#jhCumulDiv").on("mousedown.togDN", function (e) {
@@ -69,3 +66,7 @@ $("#jhCumulDiv").on("mousedown.togDN", function (e) {
         }, 2000);
     }
 });
+
+var refresh = function() {
+	location.reload();
+};
