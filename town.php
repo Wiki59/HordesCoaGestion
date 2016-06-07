@@ -18,7 +18,8 @@
             if (is_file("town/" . $town . "/citizen.json")) {
                 $citizens = file_get_contents("town/" . $town . "/citizen.json");
                 $array = json_decode($citizens, true);
-                echo sizeof($array['citizen']);
+                echo "<b>Il y a " . sizeof($array['citizen']) . " citoyen(s)</b>";
+		echo "<br/><br/>";
                 echo "<table>";
                 echo "<tr><th>Pseudo</th>
 			<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>
@@ -33,8 +34,8 @@
 			<th><img src='ressource/small_wrestle.gif' title='Uppercut sauvage' width='16' height='16'></th>
 			<th><img src='ressource/r_share.gif' title='Camaraderie' width='16' height='16'></th>
 			<th><img src='ressource/small_pa.gif' title='Second souffle' width='16' height='16'></th>
-			<th><img src='ressource/item_chest_hero.gif' title='Niveau de trouvaille (Débrouillardise, Jolie trouvaille, Prévoyant, Avantage armageddon)' width='16' height='16'></th>
-			<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
+			. " //<th><img src='ressource/item_chest_hero.gif' title='Niveau de trouvaille (Débrouillardise, Jolie trouvaille, Prévoyant, Avantage armageddon)' width='16' height='16'></th>
+			. "<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
 			<th><img src='ressource/r_cmplst.gif' title='Campeur pro' width='16' height='16'></th>
 			<th><img src='ressource/portiere.gif' title='Veilleur pro' width='16' height='16'></th>
 			<th><img src='ressource/h_ban.gif' title='Volontaire si besoin d'un banni' width='16' height='16'></th>
@@ -75,7 +76,7 @@
                         $toEcho .= "<td><input type='checkbox' name='ss'"
                                 . ($citizen["ss"] ? "checked" : "")
                                 . "/></td>";
-                        $toEcho .= "<td><input type='number' min='0' max='4' name='trouvaille' value='" . $citizen["trouvaille"] . "'/></td>";
+                        //$toEcho .= "<td><input type='number' min='0' max='4' name='trouvaille' value='" . $citizen["trouvaille"] . "'/></td>";
                         $toEcho .= "<td><input type='checkbox' name='deathtrap'"
                                 . ($citizen["deathtrap"] ? "checked" : "")
                                 . "/></td>";
@@ -92,8 +93,8 @@
                                 . ($citizen["forGoul"] ? "checked" : "")
                                 . "/></td>";
                         $toEcho .= "<td><input type='number' min='0' max='9999' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
-                        $toEcho .= "<td>" . $citizen["role"] . "</td>";
-                        $toEcho .= "<td>" . $citizen["com"] . "</td>";
+                        $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
+                        $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
                         $toEcho .= "</tr>";
                         echo $toEcho;
                     } else {
@@ -113,15 +114,15 @@
                         $toEcho .= "<td>" . $citizen["upper"] . "</td>";
                         $toEcho .= "<td>" . $citizen["solder"] . "</td>";
                         $toEcho .= "<td>" . $citizen["ss"] . "</td>";
-                        $toEcho .= "<td>" . $citizen["trouvaille"] . "</td>";
+                        //$toEcho .= "<td>" . $citizen["trouvaille"] . "</td>";
                         $toEcho .= "<td>" . $citizen["deathtrap"] . "</td>";
                         $toEcho .= "<td>" . $citizen["campPro"] . "</td>";
                         $toEcho .= "<td>" . $citizen["veilPro"] . "</td>";
                         $toEcho .= "<td>" . $citizen["forBan"] . "</td>";
                         $toEcho .= "<td>" . $citizen["forGoul"] . "</td>";
                         $toEcho .= "<td>" . $citizen["jhLeft"] . "</td>";
-                        $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
-                        $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
+                        $toEcho .= "<td>" . $citizen["com"] . "</td>";
+                        $toEcho .= "<td>" . $citizen["role"] . "</td>";
                         $toEcho .= "</tr>";
                         echo $toEcho;
                     }
@@ -147,12 +148,11 @@ function jobToImage($job) {
         case "collec":
             return "<img src='ressource/shovel.gif' title='Pelleteur' width='16' height='16'>";
         case "guardian":
-            return "<img src='ressource/h_guard.gif' title='Portière' width='16' height='16'>";
+            return "<img src='ressource/h_guard.gif' title='Portier' width='16' height='16'>";
         case "basic":
             return "<img src='ressource/citizen.gif' title='Civil' width='16' height='16'>";
 	case "hunter":
-            return "<img src='ressource/erm_book.gif' title='Campeur' width='16' height='16'>";
-            return "<img src='ressource/.gif' title='Civil' width='16' height='16'>";
+            return "<img src='ressource/erm_book.gif' title='Scout' width='16' height='16'>";
         default:
             return $job;
     }

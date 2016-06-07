@@ -55,7 +55,8 @@ $data = array(
     "isGhost" => $me["isGhost"],
     "baseDef" => $me["baseDef"],
 );
-if (isset($data["pseudo"]) {
+
+if (isset($data["pseudo"])) {
 	$_SESSION["user"] = $data;
 }
 echo json_encode($data);

@@ -1,21 +1,21 @@
 <?php
 
 /**
- * Ajoute l'utilisateur courrant dans la liste des citoyen
+ * Ajoute l'utilisateur courrant dans la liste des citoyens
  */
+session_start();
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
-} else if (isset($_SESSION["user"]) && (isset($_SESSION["user"]["pseudo"]))) {
+} else if (!isset($_SESSION["user"]["pseudo"])) {
 	echo "Vous devez vous connecter";
 } else {
-    session_start();
     if (isset($_POST["town"]) && isset($_SESSION["user"])) {
         if (is_dir("../town/" . $_POST["town"])) {
             $citizens = file_get_contents("../town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
-            if (array_key_exists($pseudo, $array_citizen)) {
+            if (array_key_exists($pseudo, $array_citizen["citizen"])) {
                 echo "Citoyen $pseudo déjà dans la liste";
             } else {
                 $pdc = 2;

@@ -9,11 +9,13 @@ $.get("../requete/info.php?state=Ok&code=" + code, function (data) {
         $("html, body").css("background-repeat", "repeat");
         console.log("ok");
     }
+/*
     if (user['pseudo'] === "WiKi59") {
         $("html, body").css("background-image", "url(../ressource/shovel.gif)");
         $("html, body").css("background-repeat", "repeat");
         console.log("ok");
     }
+*/
 });
 
 var town = $("#town").val();
