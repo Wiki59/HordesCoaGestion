@@ -5,6 +5,8 @@
  */
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
+} else if (isset($_SESSION["user"]) && (isset($_SESSION["user"]["pseudo"]))) {
+	echo "Vous devez vous connecter";
 } else {
     session_start();
     if (isset($_POST["town"]) && isset($_SESSION["user"])) {
@@ -14,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
             if (array_key_exists($pseudo, $array_citizen)) {
-                echo "Citoyen déjà dans la liste";
+                echo "Citoyen $pseudo déjà dans la liste";
             } else {
                 $pdc = 2;
                 $present = 1;
@@ -71,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 );
                 $new_citizens = json_encode($array_citizen);
                 file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
-                echo "Citoyen ajouté";
+                echo "Citoyen $pseudo ajouté " . var_dump(isset($_SESSION["user"]["pseudo"]));
             }
         } else {
             echo "Ville \"" . $_POST["town"] . "\" introuvable";

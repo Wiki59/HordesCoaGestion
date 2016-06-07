@@ -150,6 +150,9 @@ function jobToImage($job) {
             return "<img src='ressource/h_guard.gif' title='Portière' width='16' height='16'>";
         case "basic":
             return "<img src='ressource/citizen.gif' title='Civil' width='16' height='16'>";
+	case "hunter":
+            return "<img src='ressource/erm_book.gif' title='Campeur' width='16' height='16'>";
+            return "<img src='ressource/.gif' title='Civil' width='16' height='16'>";
         default:
             return $job;
     }
