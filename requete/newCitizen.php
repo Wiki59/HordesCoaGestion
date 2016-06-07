@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                         ++$present;
                     }
                 }
-                $array_citizen['citizen'][$pseudo] = array(
+                $array_citizen["citizen"][$pseudo] = array(
                     "lastPow" => lastPow($user["jhCumul"]),
                     "job" => $user["job"],
                     "nbCamp" => 0,
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 );
                 $new_citizens = json_encode($array_citizen);
                 file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
-                echo "Citoyen $pseudo ajouté " . var_dump(isset($_SESSION["user"]["pseudo"]));
+                echo "Citoyen $pseudo ajouté ";
             }
         } else {
             echo "Ville \"" . $_POST["town"] . "\" introuvable";

@@ -8,45 +8,49 @@
         echo "<div id='content'>";
         if (isset($_GET["town"])) {
             $town = $_GET["town"];
-            echo "<h1>$town</h1>";
-            echo "<div>";
-            echo "<input type='hidden' value='$town' id='town'/>";
-            echo "<input class='buttonStyle1' class='playerControl' type='button' value='S&apos;ajouter' id='addC'/>";
-            echo "<input class='buttonStyle1' type='button' value='Mettre à jour' id='majC'/>";
-            echo "</div>";
-            echo "<div id='boxInfo'></div>";
             if (is_file("town/" . $town . "/citizen.json")) {
-                $citizens = file_get_contents("town/" . $town . "/citizen.json");
-                $array = json_decode($citizens, true);
-                echo "<b>Il y a " . sizeof($array['citizen']) . " citoyen(s)</b>";
+       	        $citizens = file_get_contents("town/" . $town . "/citizen.json");
+       	        $array = json_decode($citizens, true);
+		$pseudo = $_SESSION["user"]["pseudo"];
+            	echo "<h1>$town</h1>";
+       	    	echo "<div>";
+          	 	echo "<input type='hidden' value='$town' id='town'/>";
+		if (array_key_exists($pseudo, $array["citizen"])) {
+                       	echo "<input class='buttonStyle1' class='playerControl' type='button' value='Se retirer' id='mvC'/>";
+           		} else {
+            		echo "<input class='buttonStyle1' class='playerControl' type='button' value='S&apos;ajouter' id='addC'/>";
+		}
+           	echo "<input class='buttonStyle1' type='button' value='Mettre à jour' id='majC'/>";
+          	echo "</div>";
+	        echo "<div id='boxInfo'></div>";
+       	        echo "<b>Il y a " . sizeof($array['citizen']) . " citoyen(s)</b>";
 		echo "<br/><br/>";
-                echo "<table>";
-                echo "<tr><th>Pseudo</th>
-			<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>
-			<th>Job</th>
-			<th><img src='ressource/h_guard.gif' title='Point de défense' width='16' height='16'></th>
-			<th><img src='ressource/r_ruine.gif' title='Niveau d&apos;expertise pour les ruines' width='16' height='16'></th>
-			<th><img src='ressource/arma.gif' title='Témoins de l'armageddon width='16' height='16'></th>
-			<th><img src='ressource/r_ginfec.gif' title='Grande infection' width='16' height='16'></th>
-			<th><img src='ressource/apag.gif' title='Appareil Photo de l'Avant Guerre width='16' height='16'></th>
-			<th><img src='ressource/h_calim.gif' title='Sauvetage' width='16' height='16'></th>
-			<th><img src='ressource/rdh.gif' title='Retour du héros' width='16' height='16'></th>
-			<th><img src='ressource/small_wrestle.gif' title='Uppercut sauvage' width='16' height='16'></th>
-			<th><img src='ressource/r_share.gif' title='Camaraderie' width='16' height='16'></th>
-			<th><img src='ressource/small_pa.gif' title='Second souffle' width='16' height='16'></th>
-			. " //<th><img src='ressource/item_chest_hero.gif' title='Niveau de trouvaille (Débrouillardise, Jolie trouvaille, Prévoyant, Avantage armageddon)' width='16' height='16'></th>
-			. "<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
-			<th><img src='ressource/r_cmplst.gif' title='Campeur pro' width='16' height='16'></th>
-			<th><img src='ressource/portiere.gif' title='Veilleur pro' width='16' height='16'></th>
-			<th><img src='ressource/h_ban.gif' title='Volontaire si besoin d'un banni' width='16' height='16'></th>
-			<th><img src='ressource/small_ghoul.gif' title='Volontaire si besoin d'une goule width='16' height='16'></th>
-			<th><img src='ressource/jhLeft.gif' title='Jours heros restans' width='16' height='16'></th>
-			<th>Rôle</th>
-			<th>Moyen de contact</tr>";
+       	        echo "<table>
+                <tr><th>Pseudo</th>
+		<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>
+		<th>Job</th>
+		<th><img src='ressource/h_guard.gif' title='Point de défense' width='16' height='16'></th>
+		<th><img src='ressource/r_ruine.gif' title='Niveau d&apos;expertise pour les ruines' width='16' height='16'></th>
+		<th><img src='ressource/arma.gif' title='Témoins de l'armageddon width='16' height='16'></th>
+		<th><img src='ressource/r_ginfec.gif' title='Grande infection' width='16' height='16'></th>
+		<th><img src='ressource/apag.gif' title='Appareil Photo de l'Avant Guerre width='16' height='16'></th>
+		<th><img src='ressource/h_calim.gif' title='Sauvetage' width='16' height='16'></th>
+		<th><img src='ressource/rdh.gif' title='Retour du héros' width='16' height='16'></th>
+		<th><img src='ressource/small_wrestle.gif' title='Uppercut sauvage' width='16' height='16'></th>
+		<th><img src='ressource/r_share.gif' title='Camaraderie' width='16' height='16'></th>
+		<th><img src='ressource/small_pa.gif' title='Second souffle' width='16' height='16'></th>
+		. " //<th><img src='ressource/item_chest_hero.gif' title='Niveau de trouvaille (Débrouillardise, Jolie trouvaille, Prévoyant, Avantage armageddon)' width='16' height='16'></th>
+		. "<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
+		<th><img src='ressource/r_cmplst.gif' title='Campeur pro' width='16' height='16'></th>
+		<th><img src='ressource/portiere.gif' title='Veilleur pro' width='16' height='16'></th>
+		<th><img src='ressource/h_ban.gif' title='Volontaire si besoin d'un banni' width='16' height='16'></th>
+		<th><img src='ressource/small_ghoul.gif' title='Volontaire si besoin d'une goule width='16' height='16'></th>
+		<th><img src='ressource/jhLeft.gif' title='Jours heros restans' width='16' height='16'></th>
+		<th>Rôle</th>
+		<th>Moyen de contact</tr>";
                 foreach ($array['citizen'] as $pseudo => $citizen) {
                     $toEcho = "";
                     if ($pseudo === $_SESSION["user"]["pseudo"]) {
-                        $toEcho .= "<input type='hidden' id='playerPresent' value='true'/>";
                         $toEcho .= "<tr style='background-color: rgb(235, 180, 180)'><td><b>$pseudo</b>";
                         $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                         $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
@@ -138,11 +142,9 @@
         ?>
         <script type="text/javascript" src="script/searcher.js"></script>
         <script type="text/javascript" src="script/script.js"></script>
-    </body>
-</html>
+    </body> </html>
 
 <?php
-
 function jobToImage($job) {
     switch ($job) {
         case "collec":

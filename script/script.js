@@ -69,10 +69,3 @@ $("#jhCumulDiv").on("mousedown.togDN", function (e) {
         }, 2000);
     }
 });
-
-if ($("#playerPresent").attr("value") === "true") {
-    $(".playerControler").attr("value", "Se retirer");
-    $(".playerControler").attr("id", "mvC");
-}
-
-console.log($("#playerPresent").attr("value"));
