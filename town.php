@@ -57,7 +57,10 @@ if (isset($_GET["town"])) {
             $toEcho = "";
             // Si le pseudo du citoyen correspond à l'utilisateur
             if ($pseudo === $_SESSION["user"]["pseudo"]) {
-                $toEcho .= "<tr style='background-color: rgb(220, 220, 220); box-shadow: 2px 2px 2px green, -2px -2px 2px green;'><td><b>$pseudo</b>";
+                // Affiche une ligne spécial modifiable par l'utilisateur avec un form
+                $toEcho .= "<tr style='background-color: rgb(220, 220, 220); box-shadow: 2px 2px 2px green, -2px -2px 2px green;'>";
+                $toEcho .= "<form action='requete/majCitizen.php' method='post'>";
+                $toEcho .= "<td><b>$pseudo</b>";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                 $toEcho .= "</td>";
@@ -105,9 +108,12 @@ if (isset($_GET["town"])) {
                 $toEcho .= "<td><input type='number' min='0' max='9999' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
                 $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
                 $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
+
                 $toEcho .= "</tr>";
+
                 echo $toEcho;
             } else {
+                // Affiche une ligne non modifiable contenant les infos du joueur en question
                 $toEcho .= "<tr><td>$pseudo";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
@@ -139,6 +145,7 @@ if (isset($_GET["town"])) {
         }
         echo "</table>";
     } else {
+        // Si la ville n'existe pas/plus
         echo "<h4>Ville introuvable</h4>";
     }
 } else {
@@ -152,6 +159,10 @@ echo "</div>";
 </html>
 
 <?php
+/**
+ * @param $job Le nom de job
+ * @return string Image correspondant au job
+ */
 function jobToImage($job)
 {
     switch ($job) {
