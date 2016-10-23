@@ -4,6 +4,7 @@ body {
     padding: 0;
     min-height: 100vh;
 	text-align: center;
+	font-family: Sans-Serif;
 }
 
 html {
@@ -19,8 +20,10 @@ html {
 	padding-bottom: 5px;
 	display: inline-block;
 	min-width: 100vw;
+	position: relative;
     box-shadow: 0px 4px 10px red;
     animation: enteteAnim 10s alternate;
+
 }
 
 @keyframes enteteAnim {
@@ -43,13 +46,15 @@ html {
 
 
 #rope {
-	position: fixed;
-	width: 60px;
-	top: 50px;
+	position: absolute;
+	width: 120px;
+	top: 0px;
+	margin: 0px;
 }
 
 #rope:hover {
-	animation: 1s ropeAnim alternate;
+	animation: 1s ropeAnim alternate ease-out;
+    transform-origin: 50% 0%;
 }
 
 @keyframes ropeAnim {
@@ -57,12 +62,20 @@ html {
 		transform: rotate(0deg);
 	}
 
+	25% {
+    		transform: rotate(5deg);
+	}
+
 	50% {
-    		transform: rotate(7deg);
+		transform: rotate(-7deg);
+	}
+
+	75% {
+		transform: rotate(2deg);
 	}
 
 	100% {
-		transform: rotate(-7deg);
+		transform: rotate(0deg);
 	}
 }
 
@@ -112,27 +125,24 @@ table {
 }
 
 th {
-    background: rgb(150, 150, 150);
+    background-color: black;
+	color: white;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
 }
 
 tr {
-    background: rgb(210, 210, 240);
+    background: rgb(240, 240, 240);
+	border: solid black 1px;
 }
 
-tr:nth-child(odd) {
-    background: rgb(240, 240, 240);
+tr a {
+	color: black;
 }
 
 #recoLink {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
-}
-
-#recoLink:hover {
-    color: red !important;
 }
 
 a:hover {
