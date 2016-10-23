@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     if (isset($_POST["town"]) && isset($_SESSION["user"])) {
         if (is_dir("../town/" . $_POST["town"])) {
             // Récupère la ville dans les paramètres GET
-            $citizens = file_get_contents("/town/" . $_POST["town"] . "/citizen.json");
+            $citizens = file_get_contents("../town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 $user_json["hero"] = $user["hero"];
                 $user_json["isGhost"] = $user["isGhost"];
                 $new_citizens = json_encode($array_citizen);
-                file_put_contents("/town/" . $_POST["town"] . "/citizen.json", $new_citizens);
+                file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
                 echo "Citoyen mis à jour";
             } else {
                 echo "Le citoyen n'est pas dans la liste";
