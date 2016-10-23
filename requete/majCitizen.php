@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
 } else {
     session_start();
-    if (isset($_POST["town"]) && isset($_SESSION["user"])) {
+    if (isset($_POST["town"]) && isset($_SESSION["user"]["pseudo"])) {
         if (is_dir("/town/" . $_POST["town"])) {
             // Récupère la ville dans les paramètres GET
             $citizens = file_get_contents("/town/" . $_POST["town"] . "/citizen.json");
