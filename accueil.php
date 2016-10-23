@@ -6,7 +6,7 @@
         <?php include 'template/entete.php'; ?>
         <div id="result">
             Bienvenue sur le gestionnaire de coalition.<br/>
-            Si vous rencontrez un bug ou des diffultés à utiliser le site, reportez le ici <a href="mailto:wiki59@live.fr">ici</a>.
+            Si vous rencontrez un bug ou des diffultés à utiliser le site, reportez le <a href="mailto:wiki59@live.fr">ici</a>.
         </div>
         <script type="text/javascript" src="script/script.js"></script>
     </body>
