@@ -59,7 +59,7 @@ if (isset($_GET["town"])) {
             // Si le pseudo du citoyen correspond à l'utilisateur
             if ($pseudo === $_SESSION["user"]["pseudo"]) {
                 // Affiche une ligne spécial modifiable par l'utilisateur avec un form
-                $toEcho .= "<tr style='background-color: rgb(220, 220, 220); box-shadow: 3px 3px 5px green, -3px -3px 5px green;'>";
+                $toEcho .= "<tr style='background-color: rgb(220, 220, 220); box-shadow: 3px 0px 5px green, -3px 0px 5px green;'>";
                 $toEcho .= "<td><b>$pseudo</b>";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
@@ -108,7 +108,7 @@ if (isset($_GET["town"])) {
                 $toEcho .= "<td><input type='number' min='0' max='9999' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
                 $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
                 $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
-                $toEcho .= "</tr><input type='submit' value='Modifer'/>";
+                $toEcho .= "</tr><input type='submit' hidden='hidden' value='Modifer'/>";
                 echo $toEcho;
             } else {
                 // Affiche une ligne non modifiable contenant les infos du joueur en question
