@@ -6,7 +6,6 @@
         <div id="result">
 		<?php var_dump($_SESSION); ?>
         </div>
-        <script type="text/javascript" src="script/searcher.js"></script>
         <script type="text/javascript" src="script/script.js"></script>
     </body>
 </html>

@@ -7,6 +7,7 @@ html, body {
     height: 40px;
     vertical-align: text-top;
     text-align: center;
+    box-shadow: 0px 3px 1px red;
 }
 
 #entete input, #entete #userDiv {
