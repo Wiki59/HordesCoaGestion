@@ -1,4 +1,6 @@
 <?php
+var_dump($_POST);
+var_dump($_SESSION);
 /**
  * Modifie l'utilisateur courrant dans la liste des citoyens, si il y est déjà
 */
@@ -30,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             echo "Ville introuvable";
         }
     } else {
-        header("HTTP/1.0 400 Bad Request", true, 400);
+        echo "Vous devez vous connecter";
     }
 }
 
