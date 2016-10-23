@@ -1,5 +1,7 @@
 <?php
 echo "ok";
+
+var_dump($_POST);
 /**
  * Modifie l'utilisateur courrant dans la liste des citoyens, si il y est déjà
 
