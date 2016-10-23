@@ -47,13 +47,13 @@
       <file leaf-file-name="town.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/town.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40128756">
-              <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.65665233">
+              <caret line="111" column="68" selection-start-line="111" selection-start-column="68" selection-end-line="111" selection-end-column="68" />
               <folding>
-                <marker date="1477256555667" expanded="true" signature="1620:3529" placeholder="..." />
-                <marker date="1477256555667" expanded="true" signature="1633:3529" placeholder="..." />
-                <marker date="1477256555667" expanded="true" signature="3911:4000" placeholder="..." />
-                <marker date="1477256555667" expanded="true" signature="4001:4050" placeholder="..." />
+                <marker date="1477256850917" expanded="true" signature="1620:3529" placeholder="..." />
+                <marker date="1477256850917" expanded="true" signature="1633:3529" placeholder="..." />
+                <marker date="1477256850917" expanded="true" signature="3911:4000" placeholder="..." />
+                <marker date="1477256850917" expanded="true" signature="4001:4050" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -405,10 +405,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1477256555667" expanded="true" signature="1620:3529" placeholder="..." />
-            <marker date="1477256555667" expanded="true" signature="1633:3529" placeholder="..." />
-            <marker date="1477256555667" expanded="true" signature="3911:4000" placeholder="..." />
-            <marker date="1477256555667" expanded="true" signature="4001:4050" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="1620:3529" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="1633:3529" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="3911:4000" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="4001:4050" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -573,13 +573,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/town.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40128756">
-          <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.65665233">
+          <caret line="111" column="68" selection-start-line="111" selection-start-column="68" selection-end-line="111" selection-end-column="68" />
           <folding>
-            <marker date="1477256555667" expanded="true" signature="1620:3529" placeholder="..." />
-            <marker date="1477256555667" expanded="true" signature="1633:3529" placeholder="..." />
-            <marker date="1477256555667" expanded="true" signature="3911:4000" placeholder="..." />
-            <marker date="1477256555667" expanded="true" signature="4001:4050" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="1620:3529" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="1633:3529" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="3911:4000" placeholder="..." />
+            <marker date="1477256850917" expanded="true" signature="4001:4050" placeholder="..." />
           </folding>
         </state>
       </provider>
