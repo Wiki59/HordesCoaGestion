@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             $pseudo = $user['pseudo'];
             var_dump($pseudo);
             var_dump($array_citizen);
+            var_dump(array_key_exists($pseudo, $array_citizen));
             // Modifie l'user si le pseudo égale celui de l'user
             if (array_key_exists($pseudo, $array_citizen)) {
                 $user_json = $array_citizen['citizen'][$pseudo];
