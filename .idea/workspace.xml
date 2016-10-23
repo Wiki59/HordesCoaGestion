@@ -47,15 +47,17 @@
       <file leaf-file-name="town.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/town.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4195279">
-              <caret line="110" column="68" selection-start-line="110" selection-start-column="68" selection-end-line="110" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.32832617">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
               <folding>
-                <marker date="1477259813034" expanded="true" signature="1620:3529" placeholder="..." />
-                <marker date="1477259813034" expanded="true" signature="1633:3529" placeholder="..." />
-                <marker date="1477259813034" expanded="true" signature="3911:3999" placeholder="..." />
-                <marker date="1477259813034" expanded="true" signature="4000:4049" placeholder="..." />
-                <marker date="1477259813034" expanded="true" signature="7637:7709" placeholder="..." />
-                <marker date="1477259813034" expanded="true" signature="7641:7709" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="1620:3337" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="1633:2712" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="1633:2714" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="1633:3337" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="3719:3807" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="3808:3857" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="7445:7517" placeholder="..." />
+                <marker date="1477260031568" expanded="true" signature="7449:7517" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -407,12 +409,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1477259813034" expanded="true" signature="1620:3529" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="1633:3529" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="3911:3999" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="4000:4049" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="7637:7709" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="7641:7709" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1620:3337" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1633:2712" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1633:2714" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1633:3337" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="3719:3807" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="3808:3857" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="7445:7517" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="7449:7517" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -577,15 +581,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/town.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4195279">
-          <caret line="110" column="68" selection-start-line="110" selection-start-column="68" selection-end-line="110" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.32832617">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
-            <marker date="1477259813034" expanded="true" signature="1620:3529" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="1633:3529" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="3911:3999" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="4000:4049" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="7637:7709" placeholder="..." />
-            <marker date="1477259813034" expanded="true" signature="7641:7709" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1620:3337" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1633:2712" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1633:2714" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="1633:3337" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="3719:3807" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="3808:3857" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="7445:7517" placeholder="..." />
+            <marker date="1477260031568" expanded="true" signature="7449:7517" placeholder="..." />
           </folding>
         </state>
       </provider>

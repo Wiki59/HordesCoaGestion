@@ -44,8 +44,7 @@ if (isset($_GET["town"])) {
 		<th><img src='ressource/small_wrestle.gif' title='Uppercut sauvage' width='16' height='16'></th>
 		<th><img src='ressource/r_share.gif' title='Camaraderie' width='16' height='16'></th>
 		<th><img src='ressource/small_pa.gif' title='Second souffle' width='16' height='16'></th>
-		. " //<th><img src='ressource/item_chest_hero.gif' title='Niveau de trouvaille (Débrouillardise, Jolie trouvaille, Prévoyant, Avantage armageddon)' width='16' height='16'></th>
-            . "<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
+		<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
 		<th><img src='ressource/r_cmplst.gif' title='Campeur pro' width='16' height='16'></th>
 		<th><img src='ressource/portiere.gif' title='Veilleur pro' width='16' height='16'></th>
 		<th><img src='ressource/h_ban.gif' title='Volontaire si besoin d'un banni' width='16' height='16'></th>
