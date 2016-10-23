@@ -1,9 +1,10 @@
 <?php
 
 session_start();
-// Obtention du token
+// Obtention du de la clef secrète
 $clientSecret = file_get_contents("/var/ressourceWeb/clientsecret"); // Ce fichier contient la clef secrète pour ne pas que vous la voyez
 $clientSecret = substr($clientSecret, 0, -1);
+// Obtention du token si il ne l'a pas encore
 if ($_SESSION["access_token"] === NULL) {
     $_SESSION["access_token"] = postToArray("https://twinoid.com/oauth/token", array(
                 "client_id" => "270",
@@ -13,12 +14,8 @@ if ($_SESSION["access_token"] === NULL) {
                 "grant_type" => "authorization_code",
             ))["access_token"];
 }
+echo var_dump($_SESSION["access_token"]);
 // Recuperation des infos me twino/hordes, l'id et le pseudo
-/*
-  $me = postToArray("http://twinoid.com/graph/me", array(
-  "access_token" => $_SESSION["access_token"],
-  ));
- */
 $me = postToArray("http://www.hordes.fr/tid/graph/me", array(
     "access_token" => $_SESSION["access_token"],
     "fields" => "name,twinId,hero,dead,job,baseDef,map",
