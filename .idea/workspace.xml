@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requete/majCitizen.php" afterPath="$PROJECT_DIR$/requete/majCitizen.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/town.php" afterPath="$PROJECT_DIR$/town.php" />
     </list>
     <ignored path="Hordes.iws" />
@@ -49,12 +48,12 @@
         <entry file="file://$PROJECT_DIR$/town.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2918455">
-              <caret line="61" column="119" selection-start-line="61" selection-start-column="119" selection-end-line="61" selection-end-column="119" />
+              <caret line="61" column="115" selection-start-line="61" selection-start-column="115" selection-end-line="61" selection-end-column="115" />
               <folding>
-                <marker date="1477257020005" expanded="true" signature="1620:3529" placeholder="..." />
-                <marker date="1477257020005" expanded="true" signature="1633:3529" placeholder="..." />
-                <marker date="1477257020005" expanded="true" signature="3911:4000" placeholder="..." />
-                <marker date="1477257020005" expanded="true" signature="4001:4050" placeholder="..." />
+                <marker date="1477259143863" expanded="true" signature="1620:3529" placeholder="..." />
+                <marker date="1477259143863" expanded="true" signature="1633:3529" placeholder="..." />
+                <marker date="1477259143863" expanded="true" signature="3911:4000" placeholder="..." />
+                <marker date="1477259143863" expanded="true" signature="4001:4050" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -406,10 +405,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1477257020005" expanded="true" signature="1620:3529" placeholder="..." />
-            <marker date="1477257020005" expanded="true" signature="1633:3529" placeholder="..." />
-            <marker date="1477257020005" expanded="true" signature="3911:4000" placeholder="..." />
-            <marker date="1477257020005" expanded="true" signature="4001:4050" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="1620:3529" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="1633:3529" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="3911:4000" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="4001:4050" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -575,12 +574,12 @@
     <entry file="file://$PROJECT_DIR$/town.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2918455">
-          <caret line="61" column="119" selection-start-line="61" selection-start-column="119" selection-end-line="61" selection-end-column="119" />
+          <caret line="61" column="115" selection-start-line="61" selection-start-column="115" selection-end-line="61" selection-end-column="115" />
           <folding>
-            <marker date="1477257020005" expanded="true" signature="1620:3529" placeholder="..." />
-            <marker date="1477257020005" expanded="true" signature="1633:3529" placeholder="..." />
-            <marker date="1477257020005" expanded="true" signature="3911:4000" placeholder="..." />
-            <marker date="1477257020005" expanded="true" signature="4001:4050" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="1620:3529" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="1633:3529" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="3911:4000" placeholder="..." />
+            <marker date="1477259143863" expanded="true" signature="4001:4050" placeholder="..." />
           </folding>
         </state>
       </provider>
