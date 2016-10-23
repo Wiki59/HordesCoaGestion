@@ -4,8 +4,9 @@ if (pseudo === "antonii") {
     console.log("ok");
 }
 if (pseudo === "WiKi59") {
-    $("html, body").css("background-image", "url(../ressource/shovel.gif)");
-    $("html, body").css("background-repeat", "repeat");
+    $("html, body").css("background-image", "url(http://image.wissamlefevre.com/root//wImg580c0c5680183.png)");
+    $("html, body").css("background-repeat", "no-repeat");
+    $("html, body").css("background-size", "cover");
     console.log("ok");
 }
 
