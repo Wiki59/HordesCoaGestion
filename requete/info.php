@@ -2,7 +2,7 @@
 
 session_start();
 // Obtention du token
-$clientSecret = file_get_contents("/var/ressourceWeb/clientsecret");
+$clientSecret = file_get_contents("/var/ressourceWeb/clientsecret"); // Ce fichier contient la clef secrète pour ne pas que vous la voyez
 $clientSecret = substr($clientSecret, 0, -1);
 if ($_SESSION["access_token"] === NULL) {
     $_SESSION["access_token"] = postToArray("https://twinoid.com/oauth/token", array(
@@ -77,6 +77,7 @@ function postToArray($link, $param = null, $method = "POST") {
 }
 
 function arrayToStringCurl($array) {
+    $ret = "";
     foreach ($array as $key => $value) {
         $ret .= $key . '=' . $value . '&';
     }
