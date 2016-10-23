@@ -1,7 +1,4 @@
 <?php
-session_start();
-var_dump($_POST);
-var_dump($_SESSION);
 /**
  * Modifie l'utilisateur courrant dans la liste des citoyens, si il y est déjà
 */
@@ -16,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
+            var_dump($pseudo);
+            var_dump($array_citizen);
             // Modifie l'user si le pseudo égale celui de l'user
             if (array_key_exists($pseudo, $array_citizen)) {
                 $user_json = $array_citizen['citizen'][$pseudo];
