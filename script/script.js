@@ -1,13 +1,12 @@
 if (pseudo === "antonii") {
-    $("html, body").css("background-image", "url(../ressource/vodka.gif)");
-    $("html, body").css("background-repeat", "repeat");
-    console.log("ok");
+    $("body").css("background-image", "url(../ressource/vodka.gif)");
+    $("body").css("background-repeat", "repeat");
 }
 if (pseudo === "WiKi59") {
-    $("html, body").css("background-image", "url(http://image.wissamlefevre.com/root//wImg580c0c5680183.png)");
-    $("html, body").css("background-repeat", "no-repeat");
-    $("html, body").css("background-size", "cover");
-    console.log("ok");
+    $("body").css("background-image", "url(http://image.wissamlefevre.com/root//wImg580c0c5680183.png)");
+    $("body").css("background-repeat", "no-repeat");
+    $("body").css("background-size", "auto 100%");
+    $("body").css("background-position", "center");	
 }
 
 var town = $("#town").val();

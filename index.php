@@ -2,6 +2,7 @@
 /*
  * La page d'index authentifie l'utilisateur avec son compte twinoid grâce à une redirection, les paramètres sont parser
  * à la main comme une méthode GET
+ * Cette page permet l'obtention du token qui sévira é récupérer les infos plus tard
  */
 // Lien twino
 $link = "Location: https://twinoid.com/oauth/auth?";
