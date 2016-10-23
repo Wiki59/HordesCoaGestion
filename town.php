@@ -109,7 +109,7 @@ if (isset($_GET["town"])) {
                 $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
                 $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
 
-                $toEcho .= "</tr>";
+                $toEcho .= "</form></tr>";
 
                 echo $toEcho;
             } else {

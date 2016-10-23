@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requete/majCitizen.php" afterPath="$PROJECT_DIR$/requete/majCitizen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/town.php" afterPath="$PROJECT_DIR$/town.php" />
     </list>
     <ignored path="Hordes.iws" />
@@ -46,25 +44,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="town.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="town.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/town.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.9667382">
+              <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
               <folding>
-                <marker date="1477256358489" expanded="true" signature="1551:3460" placeholder="..." />
-                <marker date="1477256358489" expanded="true" signature="1564:3460" placeholder="..." />
-                <marker date="1477256358489" expanded="true" signature="3842:3931" placeholder="..." />
-                <marker date="1477256358489" expanded="true" signature="3932:4064" placeholder="..." />
+                <marker date="1477256450296" expanded="true" signature="1551:3460" placeholder="..." />
+                <marker date="1477256450296" expanded="true" signature="1564:3460" placeholder="..." />
+                <marker date="1477256450296" expanded="true" signature="3842:3931" placeholder="..." />
+                <marker date="1477256450296" expanded="true" signature="3932:4064" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="majCitizen.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="majCitizen.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requete/majCitizen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2253218">
+            <state vertical-scroll-proportion="-79.76923">
               <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
               <folding />
             </state>
@@ -152,8 +150,8 @@
         <option value="$PROJECT_DIR$/accueil.php" />
         <option value="$PROJECT_DIR$/template/entete.php" />
         <option value="$PROJECT_DIR$/style/style.css" />
-        <option value="$PROJECT_DIR$/town.php" />
         <option value="$PROJECT_DIR$/requete/majCitizen.php" />
+        <option value="$PROJECT_DIR$/town.php" />
       </list>
     </option>
   </component>
@@ -407,10 +405,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1477256358489" expanded="true" signature="1551:3460" placeholder="..." />
-            <marker date="1477256358489" expanded="true" signature="1564:3460" placeholder="..." />
-            <marker date="1477256358489" expanded="true" signature="3842:3931" placeholder="..." />
-            <marker date="1477256358489" expanded="true" signature="3932:4064" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="1551:3460" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="1564:3460" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="3842:3931" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="3932:4064" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -565,24 +563,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/town.php">
+    <entry file="file://$PROJECT_DIR$/requete/majCitizen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
-          <folding>
-            <marker date="1477256358489" expanded="true" signature="1551:3460" placeholder="..." />
-            <marker date="1477256358489" expanded="true" signature="1564:3460" placeholder="..." />
-            <marker date="1477256358489" expanded="true" signature="3842:3931" placeholder="..." />
-            <marker date="1477256358489" expanded="true" signature="3932:4064" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-79.76923">
+          <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requete/majCitizen.php">
+    <entry file="file://$PROJECT_DIR$/town.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2253218">
-          <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
-          <folding />
+        <state vertical-scroll-proportion="0.9667382">
+          <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+          <folding>
+            <marker date="1477256450296" expanded="true" signature="1551:3460" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="1564:3460" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="3842:3931" placeholder="..." />
+            <marker date="1477256450296" expanded="true" signature="3932:4064" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
