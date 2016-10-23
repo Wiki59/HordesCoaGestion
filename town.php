@@ -29,7 +29,7 @@ if (isset($_GET["town"])) {
         echo "<b>Il y a " . sizeof($array['citizen']) . " citoyen(s)</b>";
         echo "<br/><br/>";
         // Créé la table avec un premier tr
-        echo "<form action='requete/majCitizen.php' method='post'>";
+        echo "<form action='requete/majCitizen.php?town=" . $town . " method='post'>";
         echo "<table id='citoyenTable'>
         <tr><th>Pseudo</th>
 		<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>

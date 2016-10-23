@@ -9,12 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.0 405 Method Not Allowed", true, 405);
 } else {
     session_start();
-    if (isset($_POST["town"]) && isset($_SESSION["user"])) {
+    if (isset($_GET["town"]) && isset($_SESSION["user"])) {
         if (is_dir("/town/" . $_POST["town"])) {
+            // Récupère la ville dans les paramètres GET
             $citizens = file_get_contents("/town/" . $_POST["town"] . "/citizen.json");
             $array_citizen = json_decode($citizens, true);
             $user = $_SESSION['user'];
             $pseudo = $user['pseudo'];
+            // Modifie l'user si le pseudo égale celui de l'user
             if (array_key_exists($pseudo, $array_citizen)) {
                 $user_json = $array_citizen['citizen'][$pseudo];
                 $user_json["jhCumul"] = lastPow($_POST["jhCumul"]);
@@ -27,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 file_put_contents("/town/" . $_POST["town"] . "/citizen.json", $new_citizens);
                 echo "Citoyen mis à jour";
             } else {
-                echo "Citoyen n'est pas dans la liste";
+                echo "Le citoyen n'est pas dans la liste";
             }
         } else {
             echo "Ville introuvable";

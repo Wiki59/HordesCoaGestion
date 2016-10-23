@@ -28,9 +28,8 @@ $("#mvC").on("click", function () {
 });
 
 $("#majC").on("click", function () {
-    $.post("requete/majCitizen.php",
+    $.post("requete/majCitizen.php?town=" + town,
             {
-                town: town,
                 jhCumul: $("name='jhCumul'"),
                 pdc: $("name='pdc'"),
                 nvRuin: $("name='nvRuin'"),
