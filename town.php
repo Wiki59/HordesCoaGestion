@@ -29,6 +29,7 @@ if (isset($_GET["town"])) {
         echo "<b>Il y a " . sizeof($array['citizen']) . " citoyen(s)</b>";
         echo "<br/><br/>";
         // Créé la table avec un premier tr
+        echo "<form action='requete/majCitizen.php' method='post'>";
         echo "<table id='citoyenTable'>
         <tr><th>Pseudo</th>
 		<th><img src='ressource/kniff.gif' title='Dernier pouvoir' width='16' height='16'></th>
@@ -59,7 +60,6 @@ if (isset($_GET["town"])) {
             if ($pseudo === $_SESSION["user"]["pseudo"]) {
                 // Affiche une ligne spécial modifiable par l'utilisateur avec un form
                 $toEcho .= "<tr style='background-color: rgb(220, 220, 220); box-shadow: 2px 2px 2px green, -2px -2px 2px green;'>";
-                $toEcho .= "<form action='requete/majCitizen.php' method='post'>";
                 $toEcho .= "<td><b>$pseudo</b>";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
@@ -109,7 +109,7 @@ if (isset($_GET["town"])) {
                 $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
                 $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
 
-                $toEcho .= "</form></tr>";
+                $toEcho .= "</tr>";
 
                 echo $toEcho;
             } else {
@@ -143,7 +143,7 @@ if (isset($_GET["town"])) {
                 echo $toEcho;
             }
         }
-        echo "</table>";
+        echo "</table></form>";
     } else {
         // Si la ville n'existe pas/plus
         echo "<h4>Ville introuvable</h4>";
