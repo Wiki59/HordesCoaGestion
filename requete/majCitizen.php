@@ -22,8 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
                 $user_json["dateMaj"] = new DateTime();
                 $user_json["hero"] = $user["hero"];
                 $user_json["isGhost"] = $user["isGhost"];
+                $array_citizen['citizen'][$pseudo] = $user_json;
                 $new_citizens = json_encode($array_citizen);
                 file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
+                var_dump($user_json);
+                var_dump($array_citizen);
                 echo "Citoyen mis à jour";
             } else {
                 echo "Le citoyen n'est pas dans la liste";
