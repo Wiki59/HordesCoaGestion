@@ -14,7 +14,6 @@ if ($_SESSION["access_token"] === NULL) {
                 "grant_type" => "authorization_code",
             ))["access_token"];
 }
-echo var_dump($_SESSION["access_token"]);
 // Recuperation des infos me twino/hordes, l'id et le pseudo
 $me = postToArray("http://www.hordes.fr/tid/graph/me", array(
     "access_token" => $_SESSION["access_token"],
@@ -56,7 +55,7 @@ $data = array(
 if (isset($data["pseudo"])) {
 	$_SESSION["user"] = $data;
 }
-echo json_encode($data);
+//echo json_encode($data);
 
 // Functions
 function postToArray($link, $param = null, $method = "POST") {
