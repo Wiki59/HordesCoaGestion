@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accueil.php" afterPath="$PROJECT_DIR$/accueil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/me.php" afterPath="$PROJECT_DIR$/me.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/entete.php" afterPath="$PROJECT_DIR$/template/entete.php" />
-    </list>
+    <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="" />
     <ignored path="Hordes.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
