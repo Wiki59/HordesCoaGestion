@@ -54,9 +54,10 @@ $(".searcher").on("focus", function () {
             // Affichage liste, dans une div#result
             target.on("keydown.resulter", resultShow = function (e) {
                 if (e == null || e.keyCode != 13) {
-                    toAppend = "<table><tr></tr><th><h2>Resultat :</h2></th></tr>";
+                    var toAppend = "<table><tr></tr><th><h2>Resultat :</h2></th></tr>";
                     $.each(resultTab, function (key, val) {
-                        toAppend += "<tr class='townResult'><a href='town.php?town=" + val.value + "'><td>" + val.value;
+                        var redirection = "location.href='town.php?town=" + val.value + "'";
+                        toAppend += "<tr class='townResult' onclick='" + redirection +"'><td>" + val.value;
                         toAppend += "</td></a></tr>";
                     });
                     toAppend += "</table>";
