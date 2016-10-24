@@ -70,8 +70,3 @@ $("#jhCumulDiv").on("mousedown.togDN", function (e) {
 var refresh = function() {
 	location.reload();
 };
-
-$(".townResult").on("click", function() {
-    console.log("ok", $(this).attr("town"));
-    window.location = "/town.php?town=" + $(this).attr("town");
-});

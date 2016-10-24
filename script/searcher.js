@@ -56,8 +56,7 @@ $(".searcher").on("focus", function () {
                 if (e == null || e.keyCode != 13) {
                     var toAppend = "<table><tr></tr><th><h2>Resultat :</h2></th></tr>";
                     $.each(resultTab, function (key, val) {
-                        // Event in sctipt.js
-                        toAppend += "<tr class='townResult' town='" + val.value + "'><td>" + val.value;
+                        toAppend += "<tr class='townResult' town='" + val.value + "' onclick=\"location.href('/town.php?town=" + val.value + "')\"><td>" + val.value;
                         toAppend += "</td></a></tr>";
                     });
                     toAppend += "</table>";
