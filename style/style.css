@@ -126,9 +126,8 @@ table {
 th {
     background-color: black;
     color: white;
-    border-top: solid black 1px;
     border-bottom: solid black 1px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 30px 30px 0px 0px;
 }
 
 td {
@@ -137,7 +136,7 @@ td {
 }
 
 .townResult:hover {
-    box-shadow: inset 10px 10px 5px blue, inset -10px -10px 5px blue;
+    box-shadow: 2px 2px 5px blue, -2px -2px 5px blue;
 }
 
 tr a {
