@@ -59,7 +59,7 @@ if (isset($_GET["town"])) {
             // Si le pseudo du citoyen correspond à l'utilisateur
             if ($pseudo === $_SESSION["user"]["pseudo"]) {
                 // Affiche une ligne spécial modifiable par l'utilisateur avec un form
-                $toEcho .= "<tr style='background-color: rgb(220, 220, 220); box-shadow: 3px 0px 5px green, -3px 0px 5px green;'>";
+                $toEcho .= "<tr id='citizenRow' style='background-color: rgb(220, 220, 220); box-shadow: 3px 0px 5px green, -3px 0px 5px green;'>";
                 $toEcho .= "<td><b>$pseudo</b>";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
@@ -112,7 +112,7 @@ if (isset($_GET["town"])) {
                 echo $toEcho;
             } else {
                 // Affiche une ligne non modifiable contenant les infos du joueur en question
-                $toEcho .= "<tr><td>$pseudo";
+                $toEcho .= "<tr id='citizenRow'><td>$pseudo";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                 $toEcho .= "</td>";
