@@ -131,13 +131,14 @@ th {
     border-radius: 10px 10px 0px 0px;
 }
 
-tr {
+td {
     background: linear-gradient(90deg, white, rgb(240, 240, 240), white);
     border-bottom: solid black 1px;
 }
 
 tr a {
     color: black;
+    text-decoration: none;
 }
 
 #recoLink {
