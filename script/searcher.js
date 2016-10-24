@@ -56,8 +56,8 @@ $(".searcher").on("focus", function () {
                 if (e == null || e.keyCode != 13) {
                     toAppend = "<table><tr></tr><th><h2>Resultat :</h2></th></tr>";
                     $.each(resultTab, function (key, val) {
-                        toAppend += "<tr class='townResult'><td><a href='town.php?town=" + val.value + "'>" + val.value + "</a>";
-                        toAppend += "</td></tr>";
+                        toAppend += "<tr class='townResult'><a href='town.php?town=" + val.value + "'><td>" + val.value;
+                        toAppend += "</td></a></tr>";
                     });
                     toAppend += "</table>";
                     $("#result").html(toAppend);

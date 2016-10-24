@@ -100,13 +100,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30686694">
-              <caret line="140" column="25" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
+            <state vertical-scroll-proportion="-9.692307">
+              <caret line="139" column="64" selection-start-line="139" selection-start-column="64" selection-end-line="139" selection-end-column="64" />
               <folding>
-                <marker date="1477272451616" expanded="true" signature="5:56" placeholder="{...}" />
+                <marker date="1477272689199" expanded="true" signature="5:56" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -122,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searcher.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="searcher.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/searcher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.5031315">
+              <caret line="58" column="119" selection-start-line="58" selection-start-column="119" selection-end-line="58" selection-end-column="119" />
               <folding />
             </state>
           </provider>
@@ -160,8 +160,8 @@
         <option value="$PROJECT_DIR$/script/script.js" />
         <option value="$PROJECT_DIR$/town.php" />
         <option value="$PROJECT_DIR$/requete/majCitizen.php" />
-        <option value="$PROJECT_DIR$/script/searcher.js" />
         <option value="$PROJECT_DIR$/style/style.css" />
+        <option value="$PROJECT_DIR$/script/searcher.js" />
       </list>
     </option>
   </component>
@@ -357,7 +357,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -478,7 +478,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1477272451616" expanded="true" signature="5:56" placeholder="{...}" />
+            <marker date="1477272689199" expanded="true" signature="5:56" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -563,7 +563,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
           <folding>
-            <marker date="1477272451616" expanded="true" signature="5:56" placeholder="{...}" />
+            <marker date="1477272689199" expanded="true" signature="5:56" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -699,21 +699,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/searcher.js">
+    <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
-          <folding />
+        <state vertical-scroll-proportion="-9.692307">
+          <caret line="139" column="64" selection-start-line="139" selection-start-column="64" selection-end-line="139" selection-end-column="64" />
+          <folding>
+            <marker date="1477272689199" expanded="true" signature="5:56" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/style.css">
+    <entry file="file://$PROJECT_DIR$/script/searcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30686694">
-          <caret line="140" column="25" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
-          <folding>
-            <marker date="1477272451616" expanded="true" signature="5:56" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.5031315">
+          <caret line="58" column="119" selection-start-line="58" selection-start-column="119" selection-end-line="58" selection-end-column="119" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -132,8 +132,12 @@ th {
 }
 
 td {
-    background: linear-gradient(90deg, white, rgb(240, 240, 240), white);
-    border-bottom: solid black 1px;
+    background: linear-gradient(90deg, transparent, rgb(240, 240, 240), transparent);
+    padding: 6px;
+}
+
+.townResult:hover {
+    box-shadow: inset 10px 10px 5px blue, inset -10px -10px 5px blue;
 }
 
 tr a {
@@ -152,10 +156,6 @@ a:hover {
 
 h2 {
     margin: 5px;
-}
-
-td {
-    padding: 5px;
 }
 
 .buttonStyle1 {
