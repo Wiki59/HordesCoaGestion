@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/town.php" afterPath="$PROJECT_DIR$/town.php" />
     </list>
     <ignored path="Hordes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,9 +103,9 @@
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4527897">
-              <caret line="158" column="41" selection-start-line="158" selection-start-column="41" selection-end-line="158" selection-end-column="41" />
+              <caret line="158" column="16" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
               <folding>
-                <marker date="1477275571725" expanded="true" signature="5:56" placeholder="{...}" />
+                <marker date="1477275613425" expanded="true" signature="5:56" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -478,7 +477,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1477275571725" expanded="true" signature="5:56" placeholder="{...}" />
+            <marker date="1477275613425" expanded="true" signature="5:56" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -567,7 +566,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
           <folding>
-            <marker date="1477275571725" expanded="true" signature="5:56" placeholder="{...}" />
+            <marker date="1477275613425" expanded="true" signature="5:56" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -718,9 +717,9 @@
     <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4527897">
-          <caret line="158" column="41" selection-start-line="158" selection-start-column="41" selection-end-line="158" selection-end-column="41" />
+          <caret line="158" column="16" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
           <folding>
-            <marker date="1477275571725" expanded="true" signature="5:56" placeholder="{...}" />
+            <marker date="1477275613425" expanded="true" signature="5:56" placeholder="{...}" />
           </folding>
         </state>
       </provider>
