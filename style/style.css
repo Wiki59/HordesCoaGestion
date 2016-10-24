@@ -128,11 +128,12 @@ th {
     color: white;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 tr {
-    background: rgb(240, 240, 240);
-    border: solid black 1px;
+    background: linear-gradient(90deg, white, rgb(240, 240, 240), white);
+    border-bottom: solid black 1px;
 }
 
 tr a {
