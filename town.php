@@ -112,7 +112,7 @@ if (isset($_GET["town"])) {
                 echo $toEcho;
             } else {
                 // Affiche une ligne non modifiable contenant les infos du joueur en question
-                $toEcho .= "<tr id='citizenRow'><td>$pseudo";
+                $toEcho .= "<tr class='citizenRow'><td>$pseudo";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                 $toEcho .= "</td>";

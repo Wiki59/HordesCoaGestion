@@ -106,9 +106,9 @@ html {
 #content h1 {
     box-shadow: 0px 3px 0px -1px blue;
     display: inline-flex;
-    max-height: 0;
     overflow: hidden;
     /*
+        max-height: 0;
         animation: contenth1Anim 6s forwards ease-in;
     */
 }
@@ -125,10 +125,6 @@ table {
     bordel: solid black 1px;
     width: 100%;
     border-collapse: collapse;
-}
-
-@keyframes tableAnim {
-
 }
 
 th {
