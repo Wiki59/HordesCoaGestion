@@ -123,6 +123,13 @@ table {
     border-collapse: collapse;
 }
 
+th {
+    background-color: black;
+    color: white;
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+}
+
 #headerTownResult {
     background-color: black;
     color: white;
@@ -132,6 +139,7 @@ table {
 
 td {
     padding: 6px;
+    background: rgb(240, 240, 240);
 }
 
 .townResult {
