@@ -134,6 +134,10 @@ th {
     border-top: solid black 1px;
 }
 
+td {
+    padding: 6px;
+}
+
 #headerTownResult {
     background-color: black;
     color: white;

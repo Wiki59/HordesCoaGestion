@@ -59,7 +59,7 @@ if (isset($_GET["town"])) {
             // Si le pseudo du citoyen correspond à l'utilisateur
             if ($pseudo === $_SESSION["user"]["pseudo"]) {
                 // Affiche une ligne spécial modifiable par l'utilisateur avec un form
-                $toEcho .= "<tr id='citizenRow' style='background-color: rgb(220, 220, 220); box-shadow: 4px 0px 2px -2px green, 4px 0px 2px -2px green;'>";
+                $toEcho .= "<tr id='citizenRow' style='background-color: rgb(220, 220, 220); box-shadow: 4px 0px 2px -2px green, -4px 0px 2px -2px green;'>";
                 $toEcho .= "<td><b>$pseudo</b>";
                 $toEcho .= ($citizen["hero"]) ? "<img src='ressource/star.gif' title='Heros' width='16' height='16'>" : "";
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
