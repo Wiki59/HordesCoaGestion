@@ -15,18 +15,43 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
             $pseudo = $user['pseudo'];
             // Modifie l'user si le pseudo égale celui de l'user
             if (array_key_exists($pseudo, $array_citizen['citizen'])) {
+               /*
+                * TODO POST -> ARRAY
+                */
+                // Récupère l'entrée du joueur en question
                 $user_json = $array_citizen['citizen'][$pseudo];
-                $user_json["jhCumul"] = lastPow($_POST["jhCumul"]);
+                // Modifie ses infos
+                $user_json["jhCumul"] = $_POST["jhCumul"];
                 $user_json["lastPow"] = lastPow($user_json["jhCumul"]);
+                $user_json["pdc"] = $_POST["pdc"];
+                $user_json["nvRuin"] = $_POST["nvRuin"];
+                $user_json["arma"] = $_POST["arma"];
+                $user_json["ginfec"] = $_POST["ginfec"];
+                $user_json["apag"] = $_POST["apag"];
+                $user_json["rescue"] = $_POST["rescue"];
+                $user_json["rdh"] = $_POST["rdh"];
+                $user_json["upper"] = $_POST["upper"];
+                $user_json["solder"] = $_POST["solder"];
+                $user_json["ss"] = $_POST["ss"];
+                $user_json["deathtrap"] = $_POST["deathtrap"];
+                $user_json["campPro"] = $_POST["campPro"];
+                $user_json["veilPro"] = $_POST["veilPro"];
+                $user_json["forBan"] = $_POST["forBan"];
+                $user_json["forGoul"] = $_POST["forGoul"];
+                $user_json["jhLeft"] = $_POST["jhLeft"];
+                $user_json["role"] = $_POST["role"];
+                $user_json["com"] = $_POST["com"];
+
                 $user_json["job"] = $user["job"];
                 $user_json["dateMaj"] = new DateTime();
                 $user_json["hero"] = $user["hero"];
                 $user_json["isGhost"] = $user["isGhost"];
+                // Remplace l'ancienne entrée du tableau correspondant au joueur
                 $array_citizen['citizen'][$pseudo] = $user_json;
+                // Réencode en JSON
                 $new_citizens = json_encode($array_citizen);
+                // Remplace le fichier
                 file_put_contents("../town/" . $_POST["town"] . "/citizen.json", $new_citizens);
-                var_dump($user_json);
-                var_dump($array_citizen);
                 echo "Citoyen mis à jour";
             } else {
                 echo "Le citoyen n'est pas dans la liste";

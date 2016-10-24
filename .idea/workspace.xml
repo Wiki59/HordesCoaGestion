@@ -47,8 +47,8 @@
       <file leaf-file-name="town.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/town.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.26923">
-              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+            <state vertical-scroll-proportion="-20.807692">
+              <caret line="109" column="75" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="75" />
               <folding>
                 <marker date="1477261566032" expanded="true" signature="1692:3409" placeholder="..." />
                 <marker date="1477261566032" expanded="true" signature="1705:1736" placeholder="..." />
@@ -67,8 +67,8 @@
       <file leaf-file-name="majCitizen.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requete/majCitizen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49248928">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.82081544">
+              <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -576,24 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/town.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.26923">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <marker date="1477261566032" expanded="true" signature="1692:3409" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="1705:1736" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="1705:2784" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="1705:2786" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="1705:3409" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="3791:3879" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="3880:3929" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="7517:7589" placeholder="..." />
-            <marker date="1477261566032" expanded="true" signature="7521:7589" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requete/newTown.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -610,10 +592,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/town.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.807692">
+          <caret line="109" column="75" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="75" />
+          <folding>
+            <marker date="1477261566032" expanded="true" signature="1692:3409" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="1705:1736" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="1705:2784" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="1705:2786" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="1705:3409" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="3791:3879" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="3880:3929" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="7517:7589" placeholder="..." />
+            <marker date="1477261566032" expanded="true" signature="7521:7589" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requete/majCitizen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49248928">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.82081544">
+          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
