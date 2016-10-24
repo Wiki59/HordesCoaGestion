@@ -54,7 +54,7 @@ $(".searcher").on("focus", function () {
             // Affichage liste, dans une div#result
             target.on("keydown.resulter", resultShow = function (e) {
                 if (e == null || e.keyCode != 13) {
-                    var toAppend = "<table><tr></tr><th><h2>Resultat :</h2></th></tr>";
+                    var toAppend = "<table><tr></tr><th id='headerTownResult'><h2>Resultat :</h2></th></tr>";
                     $.each(resultTab, function (key, val) {
                         toAppend += "<tr class='townResult' town='" + val.value + "' onclick=\"location.replace('/town.php?town=" + val.value + "')\"><td>" + val.value;
                         toAppend += "</td></a></tr>";
