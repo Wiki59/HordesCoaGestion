@@ -56,8 +56,7 @@ $(".searcher").on("focus", function () {
                 if (e == null || e.keyCode != 13) {
                     var toAppend = "<table><tr></tr><th><h2>Resultat :</h2></th></tr>";
                     $.each(resultTab, function (key, val) {
-                        var redirection = "location.href=town.php?town=" + val.value;
-                        toAppend += "<tr class='townResult' onclick='" + redirection +"'><td>" + val.value;
+                        toAppend += "<tr class='townResult' town='" + val.value + "'><td>" + val.value;
                         toAppend += "</td></a></tr>";
                     });
                     toAppend += "</table>";
@@ -78,4 +77,8 @@ $(".searcher").on("focus", function () {
             });
         }
     });
+});
+
+$(".townResult").on("click", function() {
+   window.location = "/town.php?town=" + $(this).attr("town");
 });
