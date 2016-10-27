@@ -18,10 +18,7 @@
                 $fileDate[] = filectime("./town/" . $t);
             }
         }
-        var_dump($fileName);
-        var_dump($fileDate);
-
-        arsort($file_dates);
+        arsort($fileDate);
         $fileNameArray = array_keys($fileDate);
         foreach ($fileNameArray as $i => $name) $name = $fileName[$name];
         $fileDate = array_merge($fileDate);
