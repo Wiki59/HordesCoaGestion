@@ -5,8 +5,9 @@
     $towns = array();
     while (false !== ($t = $dir->re²ad())) {
         if (is_dir($t) && $t != "." && $t != "..") {
-            echo "<li>" . $t . "</li>"
+            echo "<li>" . $t . "</li>";
         }
     }
+    echo "Fin";
     ?>
 </div>
