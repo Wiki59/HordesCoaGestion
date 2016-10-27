@@ -1,12 +1,12 @@
 <div id="recentTownList">
     <?php
     $dir = dir("../town");
-    $town = array();
-    while (false !== ($t = $dir->read())) {
+    echo $dir;
+    $towns = array();
+    while (false !== ($t = $dir->re²ad())) {
         if (is_dir($t) && $t != "." && $t != "..") {
-            array_push($town, $t);
+            echo "<li>" . $t . "</li>"
         }
     }
-    echo json_encode($town);
     ?>
 </div>
