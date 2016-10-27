@@ -15,7 +15,7 @@
         foreach ($dir as $t) {
             if (is_dir("./town/" . $t) && $t != "." && $t != "..") {
                 $fileName[] = $t;
-                $fileDate[] = filectime($directory . "/" . $t);
+                $fileDate[] = filectime("./town/" . $t);
             }
         }
         var_dump($fileName);
