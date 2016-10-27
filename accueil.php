@@ -10,11 +10,23 @@
     <div id="recentTownList">
         <?php
         $dir = scandir("./town");
-        var_dump($dir);
+        $fileName = array();
+        $fileDate = array();
         foreach ($dir as $t) {
             if (is_dir("./town/" . $t) && $t != "." && $t != "..") {
-                echo "<li>" . $t . "</li>";
+                $fileName[] = $t;
+                $fileDate[] = filectime($directory . "/" . $t);
             }
+        }
+        arsort($file_dates);
+        $fileNameArray = array_keys($fileDate);
+        foreach ($fileNameArray as $i => $name) $name = $fileName[$name];
+        $fileDate = array_merge($fileDate);
+        $i = 0;
+        foreach ($fileDate as $date) {
+            $j = $fileNameArray[$i];
+            echo "<li>" . $fileName[$j] . "</li>";
+            $i++;
         }
         ?>
     </div>
