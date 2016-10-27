@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/recentTown.php" afterPath="$PROJECT_DIR$/template/recentTown.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/recentTown.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accueil.php" afterPath="$PROJECT_DIR$/accueil.php" />
     </list>
     <ignored path="Hordes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,21 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="accueil.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="accueil.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accueil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recentTown.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/recentTown.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05472103">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.21888413">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -51,6 +43,26 @@
               <caret line="196" column="17" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
               <folding>
                 <marker date="1477543316150" expanded="true" signature="5:56" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="town.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/town.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="61" column="130" selection-start-line="61" selection-start-column="130" selection-end-line="61" selection-end-column="130" />
+              <folding>
+                <marker date="1477276411571" expanded="true" signature="1692:3409" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="1705:1736" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="1705:2784" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="1705:2786" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="1705:3409" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="3807:3905" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="3906:3955" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="7562:7634" placeholder="..." />
+                <marker date="1477276411571" expanded="true" signature="7566:7634" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -75,9 +87,9 @@
         <option value="$PROJECT_DIR$/script/searcher.js" />
         <option value="$PROJECT_DIR$/town.php" />
         <option value="$PROJECT_DIR$/requete/allTown.php" />
-        <option value="$PROJECT_DIR$/accueil.php" />
         <option value="$PROJECT_DIR$/style/style.css" />
         <option value="$PROJECT_DIR$/template/recentTown.php" />
+        <option value="$PROJECT_DIR$/accueil.php" />
       </list>
     </option>
   </component>
@@ -642,24 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/town.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="130" selection-start-line="61" selection-start-column="130" selection-end-line="61" selection-end-column="130" />
-          <folding>
-            <marker date="1477276411571" expanded="true" signature="1692:3409" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="1705:1736" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="1705:2784" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="1705:2786" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="1705:3409" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="3807:3905" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="3906:3955" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="7562:7634" placeholder="..." />
-            <marker date="1477276411571" expanded="true" signature="7566:7634" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -729,14 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-33.23077">
@@ -747,10 +733,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/recentTown.php">
+    <entry file="file://$PROJECT_DIR$/town.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05472103">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="61" column="130" selection-start-line="61" selection-start-column="130" selection-end-line="61" selection-end-column="130" />
+          <folding>
+            <marker date="1477276411571" expanded="true" signature="1692:3409" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="1705:1736" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="1705:2784" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="1705:2786" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="1705:3409" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="3807:3905" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="3906:3955" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="7562:7634" placeholder="..." />
+            <marker date="1477276411571" expanded="true" signature="7566:7634" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21888413">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding />
         </state>
       </provider>
