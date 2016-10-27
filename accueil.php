@@ -18,6 +18,9 @@
                 $fileDate[] = filectime($directory . "/" . $t);
             }
         }
+        var_dump($fileName);
+        var_dump($fileDate);
+
         arsort($file_dates);
         $fileNameArray = array_keys($fileDate);
         foreach ($fileNameArray as $i => $name) $name = $fileName[$name];
