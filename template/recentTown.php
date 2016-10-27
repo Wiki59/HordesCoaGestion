@@ -2,9 +2,9 @@
     <?php
     $dir = dir("../town");
     $town = array();
-    while (false !== ($f = $dir->read())) {
-        if (!is_dir($f) && $f != "." && f != "..") {
-            array_push($town, $f);
+    while (false !== ($t = $dir->read())) {
+        if (is_dir($t) && $t != "." && $t != "..") {
+            array_push($town, $t);
         }
     }
     echo json_encode($town);
