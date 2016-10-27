@@ -19,7 +19,9 @@
             }
         }
         arsort($fileDate);
-        var_dump($fileDate);
+        foreach ($fileDate as $date) {
+            echo "<li> . $date . </li>";
+        }
         ?>
     </div>
 </div>
