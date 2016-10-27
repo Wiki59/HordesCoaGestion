@@ -21,7 +21,7 @@
         }
         arsort($fileDate);
         echo "<table><tr></tr><th id='headerTownResult'><h2>Villes récentes :</h2></th></tr>";
-        foreach (array_keys($fileDate) as $iDate) {
+        foreach ($fileName[array_keys($fileDate)] as $t) {
             echo "<tr class='townResult' town='$t' onclick=\"location.replace('/town.php?town='$t')\"><td>$t</td></tr>";
         }
         echo "</table>";
