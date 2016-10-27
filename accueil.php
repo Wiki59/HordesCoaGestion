@@ -9,7 +9,7 @@
     Si vous rencontrez un bug ou des diffultés à utiliser le site, reportez le <a href="mailto:wiki59@live.fr">ici</a>.
     <div id="recentTownList">
         <?php
-        $dir = scandir(".");
+        $dir = scandir("./town");
         foreach ($dir as $t) {
             if (is_dir($t) && $t != "." && $t != "..") {
                 echo "<li>" . var_dump($t) . "</li>";
