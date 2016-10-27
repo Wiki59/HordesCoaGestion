@@ -37,9 +37,9 @@ if (isset($_GET["town"])) {
 		<th>Job</th>
 		<th><img src='ressource/h_guard.gif' title='Point de défense' width='16' height='16'></th>
 		<th><img src='ressource/r_ruine.gif' title='Niveau d&apos;expertise pour les ruines' width='16' height='16'></th>
-		<th><img src='ressource/arma.gif' title='Témoins de l'armageddon width='16' height='16'></th>
+		<th><img src='ressource/arma.gif' title='Témoins de l&apos;armageddon' width='16' height='16'></th>
 		<th><img src='ressource/r_ginfec.gif' title='Grande infection' width='16' height='16'></th>
-		<th><img src='ressource/apag.gif' title='Appareil Photo de l'Avant Guerre width='16' height='16'></th>
+		<th><img src='ressource/apag.gif' title='Appareil Photo de l&apos;Avant Guerre' width='16' height='16'></th>
 		<th><img src='ressource/h_calim.gif' title='Sauvetage' width='16' height='16'></th>
 		<th><img src='ressource/rdh.gif' title='Retour du héros' width='16' height='16'></th>
 		<th><img src='ressource/small_wrestle.gif' title='Uppercut sauvage' width='16' height='16'></th>
@@ -48,8 +48,8 @@ if (isset($_GET["town"])) {
 		<th><img src='ressource/h_death.gif' title='Trompe la mort' width='16' height='16'></th>
 		<th><img src='ressource/r_cmplst.gif' title='Campeur pro' width='16' height='16'></th>
 		<th><img src='ressource/portiere.gif' title='Veilleur pro' width='16' height='16'></th>
-		<th><img src='ressource/h_ban.gif' title='Volontaire si besoin d'un banni' width='16' height='16'></th>
-		<th><img src='ressource/small_ghoul.gif' title='Volontaire si besoin d'une goule width='16' height='16'></th>
+		<th><img src='ressource/h_ban.gif' title='Volontaire si besoin d&apos;un banni' width='16' height='16'></th>
+		<th><img src='ressource/small_ghoul.gif' title='Volontaire si besoin d&apos;une goule' width='16' height='16'></th>
 		<th><img src='ressource/jhLeft.gif' title='Jours heros restans' width='16' height='16'></th>
 		<th>Rôle</th>
 		<th>Moyen de contact</tr>";
@@ -68,46 +68,48 @@ if (isset($_GET["town"])) {
                 $toEcho .= "<div id='jhCumulDivNumber' hidden='hidden'><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
                 $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
                 $toEcho .= "<td><input type='number' min='2' max='6' name='pdc' title='Point de défense' value='" . $citizen["pdc"] . "'/></td>";
-                $toEcho .= "<td><input type='number' min='0' max='5' name='nvRuin' value='" . $citizen["nvRuin"] . "'/></td>";
-                $toEcho .= "<td><input type='checkbox' name='arma'"
+                $toEcho .= "<td><input type='number' min='0' max='5' name='nvRuin' title='Niveau d&apos;expertise pour les ruines' value='" . $citizen["nvRuin"] . "'/></td>";
+                $toEcho .= "<td><input type='checkbox' title='Témoins de l&apos;armageddon' name='arma'"
                     . ($citizen["arma"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td>" . $citizen["ginfec"] . "</td>";
-                $toEcho .= "<td><input type='number' min='0' max='3' name='apag' value='" . $citizen["apag"] . "'/></td>";
-                $toEcho .= "<td><input type='checkbox' name='rescue'"
+                $toEcho .= "<td><input type='checkbox' title='Grande infection' name='ginfec'"
+                    . ($citizen["ginfec"] ? "checked" : "")
+                    . "/></td>";
+                $toEcho .= "<td><input type='number' min='0' max='3' title='Appareil Photo de l&apos;Avant Guerre' name='apag' value='" . $citizen["apag"] . "'/></td>";
+                $toEcho .= "<td><input type='checkbox' title='Sauvetage' name='rescue'"
                     . ($citizen["rescue"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='rdh'"
+                $toEcho .= "<td><input type='checkbox' title='Retour du héros' name='rdh'"
                     . ($citizen["rdh"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='upper'"
+                $toEcho .= "<td><input type='checkbox' title='Uppercut sauvage' name='upper'"
                     . ($citizen["upper"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='solder'"
+                $toEcho .= "<td><input type='checkbox' title='Camaraderie' name='solder'"
                     . ($citizen["solder"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='ss'"
+                $toEcho .= "<td><input type='checkbox' title='Second souffle' name='ss'"
                     . ($citizen["ss"] ? "checked" : "")
                     . "/></td>";
                 //$toEcho .= "<td><input type='number' min='0' max='4' name='trouvaille' value='" . $citizen["trouvaille"] . "'/></td>";
-                $toEcho .= "<td><input type='checkbox' name='deathtrap'"
+                $toEcho .= "<td><input type='checkbox' title='Trompe la mort' name='deathtrap'"
                     . ($citizen["deathtrap"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='campPro'"
+                $toEcho .= "<td><input type='checkbox' title='Campeur pro' name='campPro'"
                     . ($citizen["campPro"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='veilPro'"
+                $toEcho .= "<td><input type='checkbox' title='Veilleur pro' name='veilPro'"
                     . ($citizen["veilPro"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='forBan'"
+                $toEcho .= "<td><input type='checkbox' title='Volontaire si besoin d&apos;un banni' name='forBan'"
                     . ($citizen["forBan"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='checkbox' name='forGoul'"
+                $toEcho .= "<td><input type='checkbox' title='Volontaire si besoin d&apos;une goule' name='forGoul'"
                     . ($citizen["forGoul"] ? "checked" : "")
                     . "/></td>";
-                $toEcho .= "<td><input type='number' min='0' max='9999' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
-                $toEcho .= "<td><input type='text' value='" . $citizen["role"] . "'/></td>";
-                $toEcho .= "<td><input type='text' value='" . $citizen["com"] . "'/></td>";
+                $toEcho .= "<td><input type='number' min='0' max='9999' title='Jours heros restans' name='jhLeft' value='" . $citizen["jhLeft"] . "'/></td>";
+                $toEcho .= "<td><input type='text' maxlength='100' title='Votre rôle concernant la ville' value='" . $citizen["role"] . "'/></td>";
+                $toEcho .= "<td><input type='text' maxlength='40' title='Moyen de communication extérieur (tel, skype, fax...)' value='" . $citizen["com"] . "'/></td>";
                 $toEcho .= "</tr><input type='submit' hidden='hidden' value='Modifer'/>";
                 echo $toEcho;
             } else {
