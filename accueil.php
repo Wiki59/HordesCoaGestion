@@ -15,7 +15,7 @@
         foreach ($dir as $t) {
             if (is_dir("./town/" . $t) && $t != "." && $t != "..") {
                 $fileName[] = $t;
-                $fileDate[] = filectime("./town/" . $t);
+                $fileDate[] = filemtime("./town/" . $t); // filectime permettrait de ranger par ordre de création /!\
             }
         }
         arsort($fileDate);
