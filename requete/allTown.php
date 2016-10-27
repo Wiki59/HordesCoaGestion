@@ -14,6 +14,7 @@
     ) {
         $dir = scandir("../town");
         $towns = array();
+        var_dump($dir);
         foreach ($dir as $t) {
             if (is_dir($t) && $t != "." && $t != "..") {
                 array_push($towns, $t);
