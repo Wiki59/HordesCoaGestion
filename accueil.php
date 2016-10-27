@@ -20,7 +20,7 @@
         }
         arsort($fileDate);
         foreach ($fileDate as $date) {
-            echo "<li> . key($date) . </li>";
+            echo "<li>" . $fileName[key($date)] . "</li>";
         }
         ?>
     </div>
