@@ -65,9 +65,9 @@ if (isset($_GET["town"])) {
                 $toEcho .= ($pseudo === "antonii") ? "<img src='ressource/vodka.gif' title='Cyka' width='16' height='16'>" : "";
                 $toEcho .= "</td>";
                 $toEcho .= "<td id='jhCumulDiv'><div id='jhCumulDivString'>" . $citizen["lastPow"] . "</div>";
-                $toEcho .= "<div id='jhCumulDivNumber' hidden><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
+                $toEcho .= "<div id='jhCumulDivNumber' hidden='hidden'><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
                 $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
-                $toEcho .= "<td><input type='number' min='2' max='10' name='pdc' value='" . $citizen["pdc"] . "'/></td>";
+                $toEcho .= "<td><input type='number' min='2' max='6' name='pdc' title='Point de défense' value='" . $citizen["pdc"] . "'/></td>";
                 $toEcho .= "<td><input type='number' min='0' max='5' name='nvRuin' value='" . $citizen["nvRuin"] . "'/></td>";
                 $toEcho .= "<td><input type='checkbox' name='arma'"
                     . ($citizen["arma"] ? "checked" : "")
