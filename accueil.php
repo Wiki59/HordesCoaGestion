@@ -7,6 +7,7 @@
         <div id="result">
             Bienvenue sur le gestionnaire de coalition.<br/>
             Si vous rencontrez un bug ou des diffultés à utiliser le site, reportez le <a href="mailto:wiki59@live.fr">ici</a>.
+            <?php include 'template/recentTown.php'; ?>
         </div>
         <script type="text/javascript" src="script/script.js"></script>
     </body>

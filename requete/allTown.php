@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 } else {
     session_start();
     if (
-    /*
+    /* A remettre
       isset($_SESSION["token"]) &&
       isset($_POST["token"]) &&
       $_SESSION["token"] == $_POST["token"]
