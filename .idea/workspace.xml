@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="197ef50e-e021-4797-b2ca-b88c637c661a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/recentTown.php" afterPath="$PROJECT_DIR$/template/recentTown.php" />
     </list>
     <ignored path="Hordes.iws" />
@@ -35,20 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recentTown.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recentTown.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/recentTown.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.091201715">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9270386">
+            <state vertical-scroll-proportion="-33.23077">
               <caret line="196" column="17" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
               <folding>
                 <marker date="1477543316150" expanded="true" signature="5:56" placeholder="{...}" />
@@ -77,8 +76,8 @@
         <option value="$PROJECT_DIR$/town.php" />
         <option value="$PROJECT_DIR$/requete/allTown.php" />
         <option value="$PROJECT_DIR$/accueil.php" />
-        <option value="$PROJECT_DIR$/template/recentTown.php" />
         <option value="$PROJECT_DIR$/style/style.css" />
+        <option value="$PROJECT_DIR$/template/recentTown.php" />
       </list>
     </option>
   </component>
@@ -738,21 +737,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/recentTown.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9270386">
+        <state vertical-scroll-proportion="-33.23077">
           <caret line="196" column="17" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
           <folding>
             <marker date="1477543316150" expanded="true" signature="5:56" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/recentTown.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.091201715">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
