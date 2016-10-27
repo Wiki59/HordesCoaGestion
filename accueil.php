@@ -10,7 +10,7 @@
     <div id="recentTownList">
         <?php
         $dir = scandir("./town");
-        echo var_dump(is_dir("./town"))
+        echo var_dump(is_dir("./town"));
         foreach ($dir as $t) {
             if (is_dir($t) && $t != "." && $t != "..") {
                 echo "<li>" . var_dump($t) . "</li>";
