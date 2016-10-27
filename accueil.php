@@ -19,15 +19,7 @@
             }
         }
         arsort($fileDate);
-        $fileNameArray = array_keys($fileDate);
-        foreach ($fileNameArray as $i => $name) $name = $fileName[$name];
-        $fileDate = array_merge($fileDate);
-        $i = 0;
-        foreach ($fileDate as $date) {
-            $j = $fileNameArray[$i];
-            echo "<li>" . $fileName[$j] . "</li>";
-            $i++;
-        }
+        var_dump($fileDate);
         ?>
     </div>
 </div>
