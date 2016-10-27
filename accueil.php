@@ -19,8 +19,8 @@
             }
         }
         arsort($fileDate);
-        foreach ($fileDate as $date) {
-            echo "<li>" . key($date) . "</li>";
+        foreach (array_keys($fileDate) as $iDate) {
+            echo "<li>" . $iDate . "</li>";
         }
         ?>
     </div>
