@@ -7,6 +7,8 @@
 <div id="result">
     Bienvenue sur le gestionnaire de coalition.<br/>
     Si vous rencontrez un bug ou des diffultés à utiliser le site, reportez le <a href="mailto:wiki59@live.fr">ici</a>.
+    </br>
+    </br>
     <div id="recentTownList">
         <?php
         $dir = scandir("./town");
