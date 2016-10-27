@@ -16,9 +16,11 @@
             if (is_dir("./town/" . $t) && $t != "." && $t != "..") {
                 $fileName[] = $t;
                 $fileDate[] = filemtime("./town/" . $t); // filectime permettrait de ranger par ordre de création /!\
+                // Unix ne garde que la date de création
             }
         }
         arsort($fileDate);
+        echo "<table>";
         foreach (array_keys($fileDate) as $iDate) {
             echo "<li>" . $fileName[$iDate] . "</li>";
         }
