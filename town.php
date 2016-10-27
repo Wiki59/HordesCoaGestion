@@ -67,6 +67,7 @@ if (isset($_GET["town"])) {
                 $toEcho .= "<td id='jhCumulDiv'><div id='jhCumulDivString'>" . $citizen["lastPow"] . "</div>";
                 $toEcho .= "<div id='jhCumulDivNumber' hidden='hidden'><input min='0' max='1000' type='number' name='jhCumul' value='" . $citizen["jhCumul"] . "'/></div></td>";
                 $toEcho .= "<td>" . jobToImage($citizen["job"]) . "</td>";
+                var_dump($citizen["job"]);
                 $toEcho .= "<td><input type='number' min='2' max='6' name='pdc' title='Point de défense' value='" . $citizen["pdc"] . "'/></td>";
                 $toEcho .= "<td><input type='number' min='0' max='5' name='nvRuin' title='Niveau d&apos;expertise pour les ruines' value='" . $citizen["nvRuin"] . "'/></td>";
                 $toEcho .= "<td><input type='checkbox' title='Témoins de l&apos;armageddon' name='arma'"
