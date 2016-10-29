@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="26b59c8f-877b-412e-8b04-984ad12df3bf" name="Hordes Deployment Rasp Server" url="http://wissamlefevre.com">
+        <fileTransfer host="wissamlefevre.com" port="22" accessType="SFTP" password="dfcedfd8dfcbdf9bdfcddfc5dfc4df98" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
